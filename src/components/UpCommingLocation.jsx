@@ -3,6 +3,7 @@ import { FaAnglesDown } from "react-icons/fa6";
 import { FaPhoneAlt } from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";
 import { CiLocationOn } from "react-icons/ci";
+import { Link } from "react-router-dom";
 
 
 
@@ -48,21 +49,21 @@ const UpCommingLocation = ({forigenLocating}) => {
           <ul className="space-y-1">
       <li className="flex gap-2 items-center">
         <FaPhoneAlt className="text-xl" />
-        <a
-          href={`tel:${forigenLocating.find((c) => c.name === activeCity)?.phone}`}
+        <Link
+          to={`tel:${forigenLocating.find((c) => c.name === activeCity)?.phone}`}
           className="text-white hover:underline"
         >
           {forigenLocating.find((c) => c.name === activeCity)?.phone}
-        </a>
+        </Link>
       </li>
       <li className="flex gap-2 items-center">
         <MdOutlineEmail className="text-xl" />
-        <a
-          href={`mailto:${forigenLocating.find((c) => c.name === activeCity)?.email}`}
+        <Link
+          to={`mailto:${forigenLocating.find((c) => c.name === activeCity)?.email}`}
           className="text-white hover:underline"
         >
           {forigenLocating.find((c) => c.name === activeCity)?.email}
-        </a>
+        </Link>
       </li>
     </ul>
     
