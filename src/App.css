@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Halcom Medium, Halcom Light';
+  src: url('path/to/Halcom-Medium.ttf') format('truetype');
+}
+
+body {
+  font-family: 'Halcom Medium, Halcom Light', Arial, sans-serif;
+}
+
+.conatainer {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+
+
