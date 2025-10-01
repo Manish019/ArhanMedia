@@ -6,11 +6,12 @@ import HomeSlider from '../components/HomeSlider'
 const Home = () => {
   return (
    <>
-   <section className='home-page'>
+   {/* <section className='home-page'>
      <div className="slider-section ">
       <HomeSlider />
     </div>
-   </section>
+   </section> */}
+   <ComingSoon />
    </>
   )
 }

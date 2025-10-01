@@ -12,7 +12,6 @@ import ComingSoon from "./pages/ComingSoon";
 import cities from "./Data/City.js";
 
 
-
 import './App.css'
 
 function App() {
@@ -27,14 +26,14 @@ function App() {
 <Route path="/about" element={<About />} />
 <Route path="/services" element={<Services />} />
 <Route path="/portfolio" element={<Portfolio />} />
-<Route path="/contact" element={<Contact cities={cities} />} />
+<Route path="/connect-us" element={<Contact cities={cities} />} />
 <Route path="*" element={<NotFound />} />
 {/* <Route path="/coming-soon" element={<ComingSoon />} /> */}
 
 </Routes>
 {/* <ComingSoon /> */}
 </main>
-{/* <Footer /> */}
+<Footer />
 </div>
 </BrowserRouter>
   )

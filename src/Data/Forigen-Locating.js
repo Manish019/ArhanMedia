@@ -5,9 +5,9 @@ const forigenLocating = [
   {
     name: "Dubai",
     icon: mumbai,
-    address: "Ground Floor, 136 Greenhill Road, Unley | SA 5061, Australia",
-    phone: "+61 8 8408 0999",
-    email: "mumbai.wx@dentsu.com",
+    address: "Up Comming",
+    phone: "+180 00 0000 000",
+    email: "bd@arhamentertainment.com",
   },
   
 ];

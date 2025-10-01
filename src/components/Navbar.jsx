@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, ChevronDown } from "lucide-react";
-import { HiOutlineArrowUturnRight } from "react-icons/hi2";
+// import { HiOutlineArrowUturnRight } from "react-icons/hi2";
+import { HiArrowUturnLeft } from "react-icons/hi2";
+
 
 import "./Navbar.css";
 
@@ -119,10 +121,10 @@ const Navbar = () => {
           </Link>
 
           <Link
-            to="/contact"
+            to="/connect-us"
             className="hidden md:block px-4 py-2 bg-indigo-600 text-white rounded-full shadow hover:opacity-95 uppercase font-semibold"
           >
-            Contact Us
+            Connect us
           </Link>
         </nav>
 
@@ -134,7 +136,7 @@ const Navbar = () => {
           {!mobileOpen ? (
             <Menu size={26} />
           ) : (
-            <HiOutlineArrowUturnRight className="w-7 h-7 text-indigo-600" />
+            <HiArrowUturnLeft className="w-9 h-9 text-indigo-600" />
           )}
         </button>
       </div>
@@ -247,7 +249,7 @@ const Navbar = () => {
               Portfolio
             </Link>
             <Link
-              to="/contact"
+              to="/connect-us"
               className="block py-2 hover:bg-indigo-50 hover:text-indigo-600 transition-colors"
             >
               Connect Us
