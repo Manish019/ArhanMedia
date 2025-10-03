@@ -13,7 +13,20 @@ body {
   max-width: 1200px;
   margin: 0 auto;
 }
+/* ClientSlider.css */
+.clients .swiper-wrapper{
+  margin-bottom: 20px;
+}
 
+.clients .swiper-pagination-bullet {
+  background-color: #4f46e5; /* bullet color */
+  opacity: 1;
+}
 
+.clients .swiper-pagination-bullet-active {
+  background-color: #cecdd4; /* active bullet color */
+}
 
-
+  .clients .swiper-pagination-fraction, .swiper-pagination-custom, .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal{
+bottom: 0px !important;
+  }

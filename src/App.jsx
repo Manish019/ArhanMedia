@@ -1,15 +1,19 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Services from "./pages/Services";
-import Portfolio from "./pages/Portfolio";
+import Work from "./pages/Work";
+import Clients from "./pages/Clients";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import ComingSoon from "./pages/ComingSoon";
 import cities from "./Data/City.js";
+import Team from "./pages/Team";
+import teamMembers from "./Data/Team.js";
+// console.log(services);
 
 
 import './App.css'
@@ -21,11 +25,18 @@ function App() {
 <div className="flex flex-col min-h-screen">
 <Navbar />
 <main className="flex-grow">
+
 <Routes>
 <Route path="/" element={<Home />} />
-<Route path="/about" element={<About />} />
-<Route path="/services" element={<Services />} />
-<Route path="/portfolio" element={<Portfolio />} />
+ <Route path="/about" element={<About />}>
+          {/* Nested route */}
+        </Route>
+        <Route path="team" element={<Team teamMembers={teamMembers} />} />
+         <Route path="/work" element={<Work />}></Route>
+          {/* Nested route */}
+                  <Route path="clients" element={<Clients />} />
+
+
 <Route path="/connect-us" element={<Contact cities={cities} />} />
 <Route path="*" element={<NotFound />} />
 {/* <Route path="/coming-soon" element={<ComingSoon />} /> */}

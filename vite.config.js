@@ -8,5 +8,11 @@ export default defineConfig({
   plugins: [react(),
         tailwindcss(),
 
+
   ],
+  server: {
+    // For SPA routing
+    historyApiFallback: true,
+  },
+
 })

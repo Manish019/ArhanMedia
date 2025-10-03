@@ -25,7 +25,7 @@ const Navbar = () => {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-10 text-[18px] text-[#3b3e50]">
+        <nav className="hidden md:flex items-center gap-10 text-[18px] text-[#193568]">
           <Link
             to="/"
             className="hover:text-indigo-600 font-bold uppercase"
@@ -34,87 +34,77 @@ const Navbar = () => {
           </Link>
 
           {/* About Dropdown */}
-          <div className="relative">
-            <button
-              className="flex items-center gap-1 hover:text-indigo-600 focus:outline-none uppercase font-semibold"
-              onMouseEnter={() => setAboutOpen(true)}
-              onMouseLeave={() => setAboutOpen(false)}
-            >
-              About Us <ChevronDown size={16} />
-            </button>
-            {aboutOpen && (
-              <div
-                className="absolute left-0 mt-2 w-44 bg-white shadow-md"
-                onMouseEnter={() => setAboutOpen(true)}
-                onMouseLeave={() => setAboutOpen(false)}
-              >
-                <Link
-                  to="/services/web"
-                  className="text-[20px] border-b border-gray-500 block px-4 py-2 hover:bg-indigo-600 hover:text-white"
-                >
-                  Press Release
-                </Link>
-                <Link
-                  to="/services/app"
-                  className="text-[20px] block px-4 py-2 hover:bg-indigo-600 hover:text-white"
-                >
-                  Awards
-                </Link>
-              </div>
-            )}
-          </div>
+         <div className="nav-item relative group">
+  <Link
+    to="/about"
+    className="flex items-center gap-1 hover:text-indigo-600 uppercase font-semibold"
+  >
+    About Us <ChevronDown size={16} />
+  </Link>
+
+  {/* Dropdown Menu */}
+  <div className="submenu absolute left-0 mt-2 w-44 bg-white shadow-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+    <Link
+      to="/team"
+      className="block px-4 py-2 border-b border-gray-500 hover:bg-indigo-600 hover:text-white"
+    >
+      Our Teams
+    </Link>
+    <Link
+      to="/services/web"
+      className="block px-4 py-2 hover:bg-indigo-600 hover:text-white"
+    >
+      Press Release
+    </Link>
+  </div>
+</div>
+
+
 
           {/* Work Dropdown */}
-          <div className="relative">
-            <button
-              className="flex items-center gap-1 hover:text-indigo-600 focus:outline-none uppercase font-semibold"
-              onMouseEnter={() => setWorkOpen(true)}
-              onMouseLeave={() => setWorkOpen(false)}
-            >
-              Work <ChevronDown size={16} />
-            </button>
-            {workOpen && (
-              <div
-                className="absolute left-0 mt-2 w-56 bg-white shadow-md"
-                onMouseEnter={() => setWorkOpen(true)}
-                onMouseLeave={() => setWorkOpen(false)}
-              >
-                <Link
-                  to="/services/web"
-                  className="border-b border-gray-500 text-[20px] block px-4 py-2 hover:bg-indigo-600 hover:text-white"
-                >
-                  Creative Direction
-                </Link>
-                <Link
-                  to="/services/app"
-                  className="border-b border-gray-500 text-[20px] block px-4 py-2 hover:bg-indigo-600 hover:text-white"
-                >
-                  Branding
-                </Link>
-                <Link
-                  to="/services/marketing"
-                  className="border-b border-gray-500 text-[20px] block px-4 py-2 hover:bg-indigo-600 hover:text-white"
-                >
-                  Social Media
-                </Link>
-                <Link
-                  to="/services/marketing"
-                  className="border-b border-gray-500 text-[20px] block px-4 py-2 hover:bg-indigo-600 hover:text-white"
-                >
-                  Videos
-                </Link>
-                <Link
-                  to="/services/marketing"
-                  className="border-b border-gray-500 text-[20px] block px-4 py-2 hover:bg-indigo-600 hover:text-white"
-                >
-                  AI Studio
-                </Link>
-              </div>
-            )}
-          </div>
+<div className="relative group">
+  <button className="flex items-center gap-1 hover:text-indigo-600 focus:outline-none uppercase font-semibold">
+    Work <ChevronDown size={16} />
+  </button>
+
+  {/* Dropdown Menu */}
+  <div className="absolute left-0 mt-2 w-56 bg-white shadow-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+    <Link
+      to="/"
+      className="border-b border-gray-500 text-[20px] block px-4 py-2 hover:bg-indigo-600 hover:text-white"
+    >
+      Creative Direction
+    </Link>
+    <Link
+      to="/services/app"
+      className="border-b border-gray-500 text-[20px] block px-4 py-2 hover:bg-indigo-600 hover:text-white"
+    >
+      Branding
+    </Link>
+    <Link
+      to="/services/marketing"
+      className="border-b border-gray-500 text-[20px] block px-4 py-2 hover:bg-indigo-600 hover:text-white"
+    >
+      Social Media
+    </Link>
+    <Link
+      to="/services/videos"
+      className="border-b border-gray-500 text-[20px] block px-4 py-2 hover:bg-indigo-600 hover:text-white"
+    >
+      Videos
+    </Link>
+    <Link
+      to="/services/ai-studio"
+      className="border-b border-gray-500 text-[20px] block px-4 py-2 hover:bg-indigo-600 hover:text-white"
+    >
+      AI Studio
+    </Link>
+  </div>
+</div>
+
 
           <Link
-            to="/portfolio"
+            to="/clients"
             className="hover:text-indigo-600 uppercase font-semibold"
           >
             Client
@@ -243,10 +233,10 @@ const Navbar = () => {
             </div>
 
             <Link
-              to="/portfolio"
+              to="/clients"
               className="block py-2 border-b border-gray-500 hover:bg-indigo-50 hover:text-indigo-600 transition-colors"
             >
-              Portfolio
+              Clients
             </Link>
             <Link
               to="/connect-us"

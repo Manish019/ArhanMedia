@@ -6,6 +6,7 @@ import { MdOutlineEmail } from "react-icons/md";
 import { ImLocation2 } from "react-icons/im";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { FaWhatsapp } from "react-icons/fa6";
+import { motion } from "framer-motion";
 
 
 const Footer = () => {
@@ -14,9 +15,16 @@ const Footer = () => {
    <footer className="mt-12 border-t border-gray-200 bg-[#f1f1f154]">
   <div className="mx-auto w-full max-w-screen-xl p-5 lg:p-8">
     {/* ✅ Responsive Grid */}
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+    <motion.div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10"
+    initial={{ y: 50, opacity: 0 }}          // Start below
+  whileInView={{ y: 0, opacity: 1 }}       // Animate up to normal position
+  transition={{ duration: 1, ease: "easeOut" }}
+  viewport={{ once: false, amount: 0.3 }}  // Animate every time scroll into view
+    
+    >
       {/* Column 1 - Logo + Social */}
       <div>
+       
         <Link to="/" className="flex items-center gap-2">
           <img
             src="/Arhan-logo.svg"
@@ -25,6 +33,13 @@ const Footer = () => {
           />
         </Link>
         <div className="social-icons flex space-x-4 mt-4 text-2xl">
+           <Link to='https://www.behance.net/7f9823c5' target='_blank'>
+    <img
+      src="/Follow-logo.png"
+      alt="Arham Entertainment Logo"
+      className="h-5 md:h-5 w-auto mb-2"
+    />
+  </Link>
           <Link to="#" target="_blank">
             <FaSquareXTwitter className="text-[#2c2c4d] hover:text-[#1DA1F2]" />
           </Link>
@@ -43,10 +58,11 @@ const Footer = () => {
     target="_blank"
     rel="noopener noreferrer"
   >
-    <FaSquareWhatsapp className="text-green-500 text-2xl hover:text-indigo-500 mt-[-8px]" />
+    <FaSquareWhatsapp className="text-green-500 text-2xl hover:text-indigo-500 mt-0" />
   </a>
-  <span className="text-white">WhatsApp</span>
+  {/* <span className="text-white">WhatsApp</span> */}
 </div>
+
           {/* <li className="flex gap-2 items-center">
       <FaWhatsapp className="text-green-500 text-lg" />
       <a
@@ -65,7 +81,7 @@ const Footer = () => {
       {/* Column 2 - Work (Blue Box) */}
 <div className="bg-[#4f39f600] p-4 rounded-xl shadow-sm relative">
   <div className="absolute top-0 left-0 w-16 h-1 bg-blue-500 rounded-tr-xl rounded-bl-xl"></div>
-  <h2 className="mt-3 mb-4 text-md font-semibold text-gray-900 uppercase">
+  <h2 className="mt-3 mb-4 text-md font-semibold text-[#05051e] uppercase">
     Work
   </h2>
   <ul className="text-gray-700 text-sm space-y-2">
@@ -91,16 +107,10 @@ const Footer = () => {
 {/* Column 3 - Contact (Green Box) */}
 <div className="bg-[#4f39f600] p-4 rounded-xl shadow-sm relative">
   <div className="absolute top-0 left-0 w-16 h-1 bg-green-500 rounded-tr-xl rounded-bl-xl"></div>
-  <h2 className="mt-3 mb-4 text-md font-semibold text-gray-900 uppercase">
+  <h2 className="mt-3 mb-4 text-md font-semibold text-[#05051e] uppercase">
     Head Office
   </h2>
-  <Link to='https://www.behance.net/7f9823c5' target='_blank'>
-    <img
-      src="/Follow-logo.png"
-      alt="Arham Entertainment Logo"
-      className="h-12 md:h-16 w-auto mb-2"
-    />
-  </Link>
+  
   <ul className="text-gray-700 space-y-3 text-sm">
     <li className="flex gap-2">
       <ImLocation2 className="text-lg flex-shrink-0 mt-1" />
@@ -141,7 +151,7 @@ const Footer = () => {
   </ul>
 </div>
 
-    </div>
+    </motion.div>
 
     {/* Divider */}
     <hr className="my-6 border-gray-300 lg:my-8" />
