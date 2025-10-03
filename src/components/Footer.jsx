@@ -16,10 +16,10 @@ const Footer = () => {
   <div className="mx-auto w-full max-w-screen-xl p-5 lg:p-8">
     {/* ✅ Responsive Grid */}
     <motion.div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10"
-    initial={{ y: 50, opacity: 0 }}          // Start below
-  whileInView={{ y: 0, opacity: 1 }}       // Animate up to normal position
+    initial={{ y: 50, opacity: 0 }}         
+  whileInView={{ y: 0, opacity: 1 }}       
   transition={{ duration: 1, ease: "easeOut" }}
-  viewport={{ once: false, amount: 0.3 }}  // Animate every time scroll into view
+  viewport={{ once: false, amount: 0.3 }}  
     
     >
       {/* Column 1 - Logo + Social */}
