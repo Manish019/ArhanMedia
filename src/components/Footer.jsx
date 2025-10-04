@@ -49,7 +49,7 @@ const Footer = () => {
           <Link to="#" target="_blank">
             <FaLinkedin className="text-[#0077B5] hover:text-[#005582]" />
           </Link>
-          <Link to="#" target="_blank">
+          <Link to="https://www.instagram.com/arham_ent/?igsh=MXFnbGkxNTl5ZjhkNA%3D%3D&utm_source=qr#" target="_blank">
             <FaSquareInstagram className="text-[#C13584] hover:text-[#a32b6d]" />
           </Link>
           <div className="flex items-center gap-2">

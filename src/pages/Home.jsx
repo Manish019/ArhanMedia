@@ -20,61 +20,70 @@ const Home = () => {
       <HomeSlider />
     </div>
    </section>
-   <section className="w-full py-10">
-<div className="container mx-auto m-w-full px-4 ">
-  <div className="max-w-6xl  flex flex-col md:flex-row gap-6 mb-2">
-    
-    {/* Left Section */}
-    <div className="md:w-3/5 bg-white shadow-lg rounded-xl p-6 mb-4">
-      <motion.h2 className="text-[55px] font-bold text-[#193568] leading-tight mb-5"
-      initial={{ x: -100, opacity: 0 }}       // Start left (outside viewport)
-  whileInView={{ x: 0, opacity: 1 }}      // Animate to normal position
-  transition={{ duration: 1, ease: "easeOut" }}
-  viewport={{ once: false, amount: 0.3 }}  // Animate every time scroll into view
+<section className="w-full py-10 bg-gray-50 overflow-auto">
+  <div className="max-w-7xl mx-auto px-4">
+ <div className="max-w-6xl flex flex-col md:flex-row gap-6 mb-2">
       
-      >We Are Increasing Business Success With Technology</motion.h2>
-      <motion.p className='text-black'
-      
-      initial={{ x: 100, opacity: 0 }}       // Start right (outside viewport)
-  whileInView={{ x: 0, opacity: 1 }}     // Animate to normal position
-  transition={{ duration: 1, ease: "easeOut" }}
-  viewport={{ once: false, amount: 0.3 }} // Animate every time scroll into view
-      
-      >Lorem ipsum dolor sit amet consectetur adipisicing elit. At doloremque maiores corrupti laborum minima recusandae necessitatibus iusto fugit, ab, error mollitia quo neque accusamus. Labore magnam perspiciatis rerum ipsam velit?</motion.p>
-      <motion.p className='text-black'
-      
-      initial={{ x: 100, opacity: 0 }}       // Start right (outside viewport)
-  whileInView={{ x: 0, opacity: 1 }}     // Animate to normal position
-  transition={{ duration: 1, ease: "easeOut" }}
-  viewport={{ once: false, amount: 0.3 }} // Animate every time scroll into view
-      
-      >Lorem ipsum dolor sit amet consectetur adipisicing elit. At doloremque maiores corrupti laborum minima recusandae necessitatibus iusto fugit, ab, error mollitia quo neque accusamus. Labore magnam perspiciatis rerum ipsam velit?</motion.p>
- <motion.div className="button mt-5"
- initial={{ y: 50, opacity: 0 }}          // Start below
-  whileInView={{ y: 0, opacity: 1 }}       // Animate up to normal position
-  transition={{ duration: 1, ease: "easeOut" }}
-  viewport={{ once: false, amount: 0.3 }}  // Animate every time scroll into view
->
-  <div className="mt-4 inline-block bg-[#193568] hover:bg-indigo-700 text-white px-6 py-2 rounded-full shadow hover:opacity-95 uppercase font-semibold text-center">
-    <Link to="/about">Learn More</Link>
-  </div>
-</motion.div>
+      {/* Left Section */}
+      <div className="w-full md:w-3/5 bg-white shadow-lg rounded-xl p-6 mb-4">
+        <motion.h2
+          className="text-2xl sm:text-3xl md:text-4xl lg:text-[55px] font-bold text-[#193568] leading-tight mb-5"
+          initial={{ x: -100, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+          viewport={{ once: false, amount: 0.3 }}
+        >
+          We Are Increasing Business Success With Technology
+        </motion.h2>
 
-     
+        <motion.p
+          className="text-sm sm:text-base md:text-lg text-black mb-4"
+          initial={{ x: 100, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+          viewport={{ once: false, amount: 0.3 }}
+        >
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. At doloremque maiores corrupti laborum minima recusandae necessitatibus iusto fugit, ab, error mollitia quo neque accusamus.
+        </motion.p>
+
+        <motion.p
+          className="text-sm sm:text-base md:text-lg text-black"
+          initial={{ x: 100, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+          viewport={{ once: false, amount: 0.3 }}
+        >
+          Labore magnam perspiciatis rerum ipsam velit? Quisquam distinctio, dolorem pariatur repellendus laboriosam.
+        </motion.p>
+
+        <motion.div
+          className="button mt-5"
+          initial={{ y: 50, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+          viewport={{ once: false, amount: 0.3 }}
+        >
+          <div className="mt-4 inline-block bg-[#193568] hover:bg-indigo-700 text-white px-6 py-2 rounded-full shadow hover:opacity-95 uppercase font-semibold text-center">
+            <Link to="/about">Learn More</Link>
+          </div>
+        </motion.div>
+      </div>
+  
+      {/* Right Section */}
+      <motion.div
+        className="w-full md:w-2/5 shadow-lg rounded-xl p-4 flex items-center justify-center"
+        initial={{ x: 100, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{ duration: 1, ease: "easeOut" }}
+        viewport={{ once: false, amount: 0.3 }}
+      >
+        <img
+          src={aboutUsImg1}
+          alt="About Us"
+          className="w-full h-[250px] sm:h-[300px] md:h-[400px] object-cover rounded-lg"
+        />
+      </motion.div>
     </div>
-
-    {/* Right Section */}
-    <motion.div className="md:w-2/5 shadow-lg rounded-xl p-6"
-    initial={{ x: 100, opacity: 0 }}       // Start right (outside viewport)
-  whileInView={{ x: 0, opacity: 1 }}     // Animate to normal position
-  transition={{ duration: 1, ease: "easeOut" }}
-  viewport={{ once: false, amount: 0.3 }} // Animate every time scroll into view
-    
-    >
-      <img src={aboutUsImg1}  alt="About Us" className="w-full h-[400px] rounded-lg" />
-    </motion.div>
-
-  </div>
    <motion.div className="mt-12"
    initial={{ x: -100, opacity: 0 }}       // Start left (outside viewport)
   whileInView={{ x: 0, opacity: 1 }}      // Animate to normal position
@@ -96,9 +105,10 @@ const Home = () => {
 >
 
   <h2 className='text-[40px] text-[#193568] font-bold pb-5'>Clients</h2>
-  <ClientSlider />
 
 </motion.div>
+  <ClientSlider />
+
   </div>
 </section>
 

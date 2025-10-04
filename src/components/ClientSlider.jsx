@@ -13,19 +13,39 @@ const ClientSlider = () => {
   return (
     <>
     <Swiper
-        slidesPerView={8}
-         spaceBetween={10}
+        spaceBetween={10}
         autoplay={{
-          delay: 2500,
+          delay: 2000,
           disableOnInteraction: false,
         }}
         loop={true}
         pagination={{
           clickable: true,
         }}
-        navigation={true}
         modules={[Pagination, Autoplay]}
         className="mySwiper clients"
+        breakpoints={{
+          0: {
+            slidesPerView: 3, // very small screens
+            spaceBetween: 10,
+          },
+          480: {
+            slidesPerView: 3, // small phones
+            spaceBetween: 15,
+          },
+          768: {
+            slidesPerView: 4, // tablets
+            spaceBetween: 20,
+          },
+          1024: {
+            slidesPerView: 6, // small desktops
+            spaceBetween: 25,
+          },
+          1280: {
+            slidesPerView: 8, // large desktops
+            spaceBetween: 30,
+          },
+        }}
       >
         <SwiperSlide>
           <div className="img-box">

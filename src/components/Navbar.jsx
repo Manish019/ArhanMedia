@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect  } from "react";
 import { Link } from "react-router-dom";
 import { Menu, ChevronDown } from "lucide-react";
 // import { HiOutlineArrowUturnRight } from "react-icons/hi2";
@@ -11,10 +11,35 @@ const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [aboutOpen, setAboutOpen] = useState(false);
   const [workOpen, setWorkOpen] = useState(false);
+    const [isScrolled, setIsScrolled] = useState(false);
+
+useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+
+
 
   return (
-    <header className="sticky top-0 z-50 backdrop-blur-md bg-white/100 shadow-sm">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-4 flex items-center justify-between">
+    <div className="relative w-full overflow-x-hidden">
+
+   <header
+      className={`fixed top-0 left-0 w-full z-[1000] transition-all duration-300 ${
+        isScrolled
+          ? "bg-white shadow-md backdrop-blur-md"
+          : "bg-transparent"
+      }`}
+    >
+  <div className="max-w-7xl mx-auto px-6 lg:px-8 py-4 flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2">
           <img
@@ -25,7 +50,11 @@ const Navbar = () => {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-10 text-[18px] text-[#193568]">
+          <nav
+          className={`hidden md:flex items-center gap-10 text-[18px] font-semibold transition-colors duration-300 ${
+            isScrolled ? "text-[#193568]" : "text-white" 
+          }`}
+        >
           <Link
             to="/"
             className="hover:text-indigo-600 font-bold uppercase"
@@ -43,19 +72,31 @@ const Navbar = () => {
   </Link>
 
   {/* Dropdown Menu */}
-  <div className="submenu absolute left-0 mt-2 w-44 bg-white shadow-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+  <div
+  className={`submenu absolute left-0 mt-2 w-44 shadow-md transition-all duration-300
+    ${isScrolled ? "bg-white" : "bg-[#193568]"} 
+    opacity-0 invisible group-hover:opacity-100 group-hover:visible`}
+>
+     <Link
+      to="/services/web"
+      className="block px-4 py-2 border-b border-gray-500 hover:bg-indigo-600 hover:text-white"
+    >
+      Press Release
+    </Link>
     <Link
       to="/team"
       className="block px-4 py-2 border-b border-gray-500 hover:bg-indigo-600 hover:text-white"
     >
       Our Teams
     </Link>
+   
     <Link
-      to="/services/web"
+      to="/award"
       className="block px-4 py-2 hover:bg-indigo-600 hover:text-white"
     >
-      Press Release
-    </Link>
+Awards   
+
+ </Link>
   </div>
 </div>
 
@@ -68,7 +109,11 @@ const Navbar = () => {
   </button>
 
   {/* Dropdown Menu */}
-  <div className="absolute left-0 mt-2 w-56 bg-white shadow-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+ <div
+  className={`submenu absolute left-0 mt-2 w-[220px] shadow-md transition-all duration-300
+    ${isScrolled ? "bg-white" : "bg-[#193568]"} 
+    opacity-0 invisible group-hover:opacity-100 group-hover:visible`}
+>
     <Link
       to="/"
       className="border-b border-gray-500 text-[20px] block px-4 py-2 hover:bg-indigo-600 hover:text-white"
@@ -121,8 +166,9 @@ const Navbar = () => {
         {/* Mobile Hamburger */}
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className="md:hidden z-50 relative"
-        >
+          className={`md:hidden z-50 relative ${
+        isScrolled ? "text-black" : "text-white"
+      }`}>
           {!mobileOpen ? (
             <Menu size={26} />
           ) : (
@@ -150,7 +196,7 @@ const Navbar = () => {
             <div className="border-b border-gray-500">
               <button
                 onClick={() => setAboutOpen(!aboutOpen)}
-                className="flex items-center justify-between w-full py-2 hover:bg-indigo-50 hover:text-indigo-600 transition-colors"
+                className="flex items-center justify-between w-full py-2 hover:bg-indigo-50 hover:text-indigo-600 transition-colors "
               >
                 About Us
                 <ChevronDown
@@ -248,6 +294,7 @@ const Navbar = () => {
         )}
       </div>
     </header>
+    </div>
   );
 };
 
