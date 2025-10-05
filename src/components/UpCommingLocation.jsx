@@ -4,6 +4,7 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";
 import { CiLocationOn } from "react-icons/ci";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 
 
@@ -12,8 +13,15 @@ const UpCommingLocation = ({forigenLocating}) => {
   
   return (
     <>
-   <div className="container mx-auto px-4 py-10">
-       <h2 className="flex text-3xl font-bold mb-6 items-center justify-center uppercase ">India Location</h2>
+   <motion.div className="container mx-auto px-4 py-10"
+   initial={{ y: 50, opacity: 0 }}         
+  whileInView={{ y: 0, opacity: 1 }}       
+  transition={{ duration: 1, ease: "easeOut" }}
+  viewport={{ once: false, amount: 0.3 }}  
+   
+   >
+       <h2 className="flex text-3xl font-bold mb-6 items-center justify-center text-[#193568]  ">Overseas Location</h2>
+
      {/* forigenLocating Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
      {forigenLocating.map((city) => (
@@ -22,7 +30,7 @@ const UpCommingLocation = ({forigenLocating}) => {
          onClick={() =>
            setActiveCity(activeCity === city.name ? null : city.name)
          }
-         className={`cursor-pointer flex flex-col items-center justify-center p-6 border rounded-lg transition bg-[#2c2c4d] ${
+         className={`cursor-pointer flex flex-col items-center justify-center p-6 border rounded-lg transition bg-[#193568] ${
            activeCity === city.name
              ? "bg-[#0000ff] border-white"
              : "border-bg-indigo-600 hover:bg-indigo-600"
@@ -38,7 +46,7 @@ const UpCommingLocation = ({forigenLocating}) => {
    
          {/* 👇 Mobile/Tablet me wahi card ke andar detail box show hoga */}
          {activeCity === city.name && (
-           <div className="mt-4 bg-[#2c2c4d] p-3 rounded-lg w-full text-white block md:hidden">
+           <div className="mt-4 bg-[#193568] p-3 rounded-lg w-full text-white block md:hidden">
              <h2 className="text-xl font-bold mb-2">{city.name}</h2>
              <p className="mb-2 flex gap-2">
                <CiLocationOn className="text-xl" />
@@ -72,8 +80,14 @@ const UpCommingLocation = ({forigenLocating}) => {
    
    {/* 👇 Desktop me alag se detail box show hoga */}
    {activeCity && (
-     <div className="hidden md:block mt-6 bg-[#2c2c4d] p-3 rounded-lg w-full text-white border-t-2 
-     border-[#fff]">
+     <motion.div className="hidden md:block mt-6 bg-[#193568] p-3 rounded-lg w-full text-white border-t-2 
+     border-[#fff]"
+     initial={{ x: -100, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{ duration: 1, ease: 'easeOut' }}
+        viewport={{ once: false, amount: 0.3 }}
+     
+     >
        <h2 className="text-2xl font-bold mb-4">{activeCity}</h2>
        <p className="mb-2 flex gap-2">
          <CiLocationOn className="text-xl" />
@@ -99,10 +113,10 @@ const UpCommingLocation = ({forigenLocating}) => {
            </a>
          </li>
        </ul>
-     </div>
+     </motion.div>
    )}
    
-   </div>
+   </motion.div>
     </>
   )
 }

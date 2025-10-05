@@ -8,6 +8,7 @@ import { Pagination, Autoplay } from 'swiper/modules';
 
 const ServiceSlider = () => {
   return (
+    
     <Swiper
       slidesPerView={3} // 3 cards per view
       spaceBetween={30}
@@ -19,6 +20,25 @@ const ServiceSlider = () => {
       pagination={{ clickable: true }}
       modules={[Pagination, Autoplay]}
       className="mySwiper clients"
+      breakpoints={{
+    320: {
+      slidesPerView: 1, // 📱 Mobile
+      spaceBetween: 10,
+    },
+    640: {
+      slidesPerView: 1, // Small tablets
+      spaceBetween: 15,
+    },
+    768: {
+      slidesPerView: 2, // Tablets
+      spaceBetween: 20,
+    },
+    1024: {
+      slidesPerView: 3, // Desktops
+      spaceBetween: 30,
+    },
+  }}
+
     >
       {services.map((service) => (
         <SwiperSlide key={service.id}>

@@ -26,6 +26,17 @@ useEffect(() => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const [isTablet, setIsTablet] = useState(window.innerWidth >= 768 && window.innerWidth < 1024);
+
+useEffect(() => {
+  const handleResize = () => {
+    setIsTablet(window.innerWidth >= 768 && window.innerWidth < 1024);
+  };
+  window.addEventListener("resize", handleResize);
+  return () => window.removeEventListener("resize", handleResize);
+}, []);
+
+
 
 
 
@@ -51,7 +62,7 @@ useEffect(() => {
 
         {/* Desktop Navigation */}
           <nav
-          className={`hidden md:flex items-center gap-10 text-[18px] font-semibold transition-colors duration-300 ${
+          className={`hidden md:flex items-center gap-10 sm:text-lg md:text-[14px] lg:text-[18px] xl:text-[18px] font-semibold transition-colors duration-300 ${
             isScrolled ? "text-[#193568]" : "text-white" 
           }`}
         >
@@ -63,59 +74,77 @@ useEffect(() => {
           </Link>
 
           {/* About Dropdown */}
-         <div className="nav-item relative group">
-  <Link
-    to="/about"
+         {/* About Dropdown */}
+<div
+  className="nav-item relative group"
+  onClick={() => {
+    if (isTablet) setAboutOpen(!aboutOpen);
+  }}
+>
+  <button
     className="flex items-center gap-1 hover:text-indigo-600 uppercase font-semibold"
   >
     About Us <ChevronDown size={16} />
-  </Link>
+  </button>
 
-  {/* Dropdown Menu */}
   <div
-  className={`submenu absolute left-0 mt-2 w-44 shadow-md transition-all duration-300
-    ${isScrolled ? "bg-white" : "bg-[#193568]"} 
-    opacity-0 invisible group-hover:opacity-100 group-hover:visible`}
->
-     <Link
-      to="/services/web"
+    className={`submenu absolute left-0 mt-2 w-44 shadow-md transition-all duration-300
+      ${isScrolled ? "bg-white" : "bg-[#193568]"}
+      ${
+        isTablet
+          ? aboutOpen
+            ? "opacity-100 visible"
+            : "opacity-0 invisible"
+          : "opacity-0 invisible group-hover:opacity-100 group-hover:visible"
+      }`}
+  >
+    <Link
+      to="/about/press-release"
       className="block px-4 py-2 border-b border-gray-500 hover:bg-indigo-600 hover:text-white"
     >
       Press Release
     </Link>
     <Link
-      to="/team"
+      to="/about/team"
       className="block px-4 py-2 border-b border-gray-500 hover:bg-indigo-600 hover:text-white"
     >
       Our Teams
     </Link>
-   
     <Link
-      to="/award"
+      to="/about/award"
       className="block px-4 py-2 hover:bg-indigo-600 hover:text-white"
     >
-Awards   
-
- </Link>
+      Awards
+    </Link>
   </div>
 </div>
 
 
 
-          {/* Work Dropdown */}
-<div className="relative group">
+         {/* Work Dropdown */}
+<div
+  className="relative group"
+  onClick={() => {
+    if (isTablet) setWorkOpen(!workOpen);
+  }}
+>
   <button className="flex items-center gap-1 hover:text-indigo-600 focus:outline-none uppercase font-semibold">
     Work <ChevronDown size={16} />
   </button>
 
-  {/* Dropdown Menu */}
- <div
-  className={`submenu absolute left-0 mt-2 w-[220px] shadow-md transition-all duration-300
-    ${isScrolled ? "bg-white" : "bg-[#193568]"} 
-    opacity-0 invisible group-hover:opacity-100 group-hover:visible`}
->
+  <div
+    className={`submenu absolute left-0 mt-2 w-[220px] shadow-md transition-all duration-300
+      ${isScrolled ? "bg-white" : "bg-[#193568]"}
+      ${
+        isTablet
+          ? workOpen
+            ? "opacity-100 visible"
+            : "opacity-0 invisible"
+          : "opacity-0 invisible group-hover:opacity-100 group-hover:visible"
+      }`}
+  >
     <Link
-      to="/"
+      to="/work/creative-design"
       className="border-b border-gray-500 text-[20px] block px-4 py-2 hover:bg-indigo-600 hover:text-white"
     >
       Creative Direction
@@ -157,7 +186,8 @@ Awards
 
           <Link
             to="/connect-us"
-            className="hidden md:block px-4 py-2 bg-indigo-600 text-white rounded-full shadow hover:opacity-95 uppercase font-semibold"
+                        className="hover:text-indigo-600 uppercase font-semibold"
+
           >
             Connect us
           </Link>
@@ -212,13 +242,19 @@ Awards
                 }`}
               >
                 <Link
-                  to="/services/creative-direction"
+                  to="/about/press-release"
                   className="block py-2 border-b border-gray-500 hover:bg-indigo-50 hover:text-indigo-600 transition-colors font-light"
                 >
                   Press Release
                 </Link>
+                 <Link
+                  to="/about/team"
+                  className="block py-2 border-b border-gray-500 hover:bg-indigo-50 hover:text-indigo-600 transition-colors font-light"
+                >
+                 Our Teams
+                </Link>
                 <Link
-                  to="/services/branding"
+                  to="/about/awards"
                   className="block py-2 hover:bg-indigo-50 hover:text-indigo-600 transition-colors"
                 >
                   Awards
@@ -246,31 +282,31 @@ Awards
                 }`}
               >
                 <Link
-                  to="/services/creative-direction"
+                  to="/work/creative-design"
                   className="block py-2 border-b border-gray-500 hover:bg-indigo-50 hover:text-indigo-600 transition-colors"
                 >
                   Creative Direction
                 </Link>
                 <Link
-                  to="/services/branding"
+                  to="/work/branding"
                   className="block py-2 border-b border-gray-500 hover:bg-indigo-50 hover:text-indigo-600 transition-colors"
                 >
                   Branding
                 </Link>
                 <Link
-                  to="/services/social-media"
+                  to="/work/social-media"
                   className="block py-2 hover:bg-indigo-50 hover:text-indigo-600 transition-colors border-b border-gray-500"
                 >
                   Social Media
                 </Link>
                 <Link
-                  to="/services/videos"
+                  to="/work/videos"
                   className="block py-2 hover:bg-indigo-50 hover:text-indigo-600 transition-colors border-b border-gray-500"
                 >
                   Videos
                 </Link>
                 <Link
-                  to="/services/ai-studio"
+                  to="/work/ai-studio"
                   className="block py-2 hover:bg-indigo-50 hover:text-indigo-600 transition-colors border-b border-gray-500"
                 >
                   AI Studio

@@ -28,17 +28,17 @@ const HomeSlider = () => {
         autoplay={{ delay: 2500, disableOnInteraction: false }}
         pagination={{ clickable: true }}
         modules={[Autoplay, Pagination]}
-        className="w-full h-[70vh] sm:h-[75vh] md:h-[85vh] lg:h-screen"
+        className="w-full h-[60vh] sm:h-[75vh] md:h-[75vh] lg:h-screen"
       >
         {/* Slide 1 */}
         <SwiperSlide>
           <div className="relative w-full h-full">
             <img
-              src="/slider3.jpg"
+              src="/slider1.jpg"
               alt="Home Banner"
-              className="w-full h-full object-cover shadow-lg"
+              className="w-full h-auto object-cover shadow-lg"
             />
-            <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
+            {/* <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
               <motion.h2
                className="text-2xl sm:text-3xl md:text-4xl lg:text-[55px] font-bold text-white mb-4 leading-snug sm:leading-tight"
                 initial={{ y: -50, opacity: 0, scale: 0.95 }}
@@ -56,7 +56,7 @@ const HomeSlider = () => {
 
                 Get Started
               </button>
-            </div>
+            </div> */}
           </div>
         </SwiperSlide>
 
@@ -66,7 +66,7 @@ const HomeSlider = () => {
             <img
               src="/slider2.jpg"
               alt="Home Banner"
-              className="w-full h-full object-cover shadow-lg"
+              className="w-full auto object-cover shadow-lg"
             />
             <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
               <motion.h2

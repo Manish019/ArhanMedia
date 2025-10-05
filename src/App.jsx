@@ -17,6 +17,8 @@ import teamMembers from "./Data/Team.js";
 
 
 import './App.css'
+import CreativeDesign from "./pages/CreativeDesign.jsx";
+import PressRealese from "./pages/PressRealese.jsx";
 
 function App() {
 
@@ -30,10 +32,13 @@ function App() {
  <Route path="/about" element={<About />}>
           {/* Nested route */}
         </Route>
-        <Route path="team" element={<Team teamMembers={teamMembers} />} />
+        <Route path="/about/team" element={<Team teamMembers={teamMembers} />} />
          <Route path="/work" element={<Work />}></Route>
           {/* Nested route */}
-                  <Route path="clients" element={<Clients />} />
+        <Route path="clients" element={<Clients />} />
+<Route path="/work/creative-design" element={<CreativeDesign />} />
+<Route path="/about/press-release" element={<PressRealese />} />
+
 
 
 <Route path="/connect-us" element={<Contact cities={cities} />} />
