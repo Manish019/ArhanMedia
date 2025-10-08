@@ -46,7 +46,7 @@ const slidesData = [
     image: "/slider3.jpg",
     subtitle: "DIGITAL EXPERTS",
     title1: "Design. Build.",
-    title2: "Deliver.",
+    title2: "Deliver",
     title3: "Delight.",
     description:
       "From concept to launch — we create meaningful digital experiences that inspire action.",
