@@ -38,11 +38,11 @@ useEffect(() => {
   return (
     <div className="relative w-full overflow-x-hidden">
       <header
-        className={`fixed top-0 left-0 w-full z-[1000] transition-all duration-500 transform
-          ${isScrolled ? "bg-white shadow-md backdrop-blur-md" : "bg-transparent"}
-          ${showHeader ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"}
-        `}
-      >
+  className={`fixed top-0 left-0 w-full z-[1000] transition-all duration-500 transform
+    ${isScrolled ? "bg-white shadow-md backdrop-blur-md" : "bg-transparent"}
+    ${showHeader ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"}
+  `}
+>
         <div className="max-w-8xl mx-auto px-6 lg:px-20 py-4 flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2">

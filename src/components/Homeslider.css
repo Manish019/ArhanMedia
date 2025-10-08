@@ -63,7 +63,7 @@
 
 
 /* For very small devices (<= 400px) */
-@media (max-width: 365px) {
+@media (max-width: 340px) {
   .slider-section h2 {
     font-size: 1.3rem !important; /* around text-xl */
     line-height: 1.6rem !important;
@@ -82,7 +82,7 @@
 }
 
 /* For small phones (401px - 640px) */
-@media (min-width: 365px) and (max-width: 640px) {
+@media (min-width: 340px) and (max-width: 640px) {
   .slider-section h2 {
     font-size: 1.6rem !important; /* text-2xl */
     line-height: 2rem !important;
@@ -106,12 +106,12 @@
 /* For tablets (641px - 1024px) */
 @media (min-width: 641px) and (max-width: 1023px) {
   .inner-section{
-   width: 600px !important;
+   width: 700px !important;
   }
 
   
   .slider-section h1 {
-    font-size: 45px !important; /* text-3xl */
+    font-size: 40px !important; /* text-3xl */
   }
 
   .slider-section p {

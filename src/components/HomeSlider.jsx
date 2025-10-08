@@ -84,40 +84,55 @@ const HomeSlider = () => {
         <div className="absolute inset-0 bg-black/5"></div>
 
         {/* Content */}
-        <div
-          className="absolute inset-0 flex flex-col justify-center items-start
-          px-5 sm:px-10 md:px-16 lg:px-24 text-white z-10 text-left gap-3"
-        >
-          <motion.div
-            initial={{ y: -40, opacity: 0, scale: 0.95 }}
-            whileInView={{ y: 0, opacity: 1, scale: 1 }}
-            transition={{ duration: 1, ease: "easeOut" }}
-            viewport={{ once: false, amount: 0.3 }}
-            className="w-full sm:w-[90%] md:w-[700px] lg:w-[650px] mx-auto sm:mx-0 lg:mt-5"
-          >
-            <h3 className="text-[12px] sm:text-sm md:text-[16px] lg:text-[20px] tracking-wide mb-2 sm:mb-3">
-              {slide.subtitle}
-            </h3>
+       <div className="absolute inset-0 flex flex-col md:flex-row items-center md:items-center justify-center px-5 sm:px-10 md:px-16 lg:px-24 z-10 text-white gap-5">
+  {/* Left Column - Text */}
+  <motion.div
+    initial={{ y: -40, opacity: 0, scale: 0.95 }}
+    whileInView={{ y: 0, opacity: 1, scale: 1 }}
+    transition={{ duration: 1, ease: "easeOut" }}
+    viewport={{ once: false, amount: 0.3 }}
+    className="w-full md:w-1/2 flex flex-col justify-center items-start text-left"
+  >
+    <h3 className="text-[12px] sm:text-sm md:text-[16px] lg:text-[20px] tracking-wide mb-2 sm:mb-3">
+      {slide.subtitle}
+    </h3>
 
-            <h1 className="text-[26px] sm:text-[34px] md:text-[65px] leading-tight mb-2">
-              {slide.title1}
-            </h1>
+    <h1 className="text-[26px] sm:text-[34px] md:text-[65px] leading-tight mb-2">
+      {slide.title1}
+    </h1>
 
-            <p className="text-[12px] sm:text-[14px] md:text-[20px] leading-light mb-5 sm:mb-6 text-gray-200">
-              {slide.description}
-            </p>
+    <p className="text-[12px] sm:text-[14px] md:text-[20px] leading-light mb-5 sm:mb-6 text-gray-200">
+      {slide.description}
+    </p>
 
-            <Link
-              to={slide.buttonLink}
-              className="inline-flex items-center gap-1 sm:gap-2 border border-indigo-100 hover:bg-indigo-700 
-              transition px-3 py-2 sm:px-5 sm:py-3 rounded-md sm:rounded-lg font-medium 
-              text-[12px] sm:text-[14px] md:text-[15px] lg:text-[16px] text-white"
-            >
-              {slide.buttonText}
-              <GoArrowUpRight className="text-sm sm:text-base md:text-lg lg:text-xl" />
-            </Link>
-          </motion.div>
-        </div>
+    <Link
+      to={slide.buttonLink}
+      className="inline-flex items-center gap-1 sm:gap-2 border border-indigo-100 hover:bg-indigo-700 
+      transition px-3 py-2 sm:px-5 sm:py-3 rounded-md sm:rounded-lg font-medium 
+      text-[12px] sm:text-[14px] md:text-[15px] lg:text-[16px] text-white"
+    >
+      {slide.buttonText}
+      <GoArrowUpRight className="text-sm sm:text-base md:text-lg lg:text-xl" />
+    </Link>
+  </motion.div>
+
+  {/* Right Column - Image (Hidden on mobile) */}
+  <motion.div
+    className="w-full md:w-1/2 flex justify-center md:justify-end hidden md:flex"
+    initial={{ x: 100, opacity: 0 }}
+    whileInView={{ x: 0, opacity: 1 }}
+    transition={{ duration: 1, ease: "easeOut" }}
+    viewport={{ once: false, amount: 0.3 }}
+  >
+    <img
+      src="./bottel.png"
+      alt="bottel"
+      className="w-full max-w-[400px] md:max-w-[400px] object-cover rounded-lg"
+    />
+  </motion.div>
+</div>
+
+
       </div>
     </SwiperSlide>
   ))}
