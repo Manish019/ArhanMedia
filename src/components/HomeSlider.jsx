@@ -16,118 +16,130 @@ import { Link } from 'react-router-dom';
 import { motion } from "framer-motion";
 import './Homeslider.css'
 
-
+const slidesData = [
+  {
+    id: 1,
+    image: "/n-slider.png",
+    subtitle: "DESIGN TEAM",
+    title1: "That Care About",
+    title2: "Every Tiny Little",
+    title3: "Detail.",
+    description:
+      "We don't just make it look good — we make it make sense. Every pixel enhances your brand.",
+    buttonText: "Download Portfolio",
+    buttonLink: "/",
+  },
+  {
+    id: 2,
+    image: "/slider2.jpg",
+    subtitle: "CREATIVE STUDIO",
+    title1: "Turning Ideas",
+    title2: "Into Stunning",
+    title3: "Reality.",
+    description:
+      "We craft visually appealing experiences that connect emotionally and drive results.",
+    buttonText: "Explore Work",
+    buttonLink: "/portfolio",
+  },
+  {
+    id: 3,
+    image: "/slider3.jpg",
+    subtitle: "DIGITAL EXPERTS",
+    title1: "Design. Build.",
+    title2: "Deliver.",
+    title3: "Delight.",
+    description:
+      "From concept to launch — we create meaningful digital experiences that inspire action.",
+    buttonText: "Learn More",
+    buttonLink: "/about",
+  },
+];
 const HomeSlider = () => {
 
 
   return (
   <>
-  <section className="slider-section relative w-full">
+  <section className="slider-section relative w-full overflow-hidden">
       <Swiper
         slidesPerView={1}
         loop={true}
-        autoplay={{ delay: 2500, disableOnInteraction: false }}
+        autoplay={{ delay: 3500, disableOnInteraction: false }}
         pagination={{ clickable: true }}
         modules={[Autoplay, Pagination]}
-        className="w-full h-[70vh] sm:h-[55vh] md:h-[85vh] lg:h-screen"
+        className="w-full h-[70vh] sm:h-[75vh] md:h-[85vh] lg:h-screen"
       >
-        {/* Slide 1 */}
-        <SwiperSlide>
-        <div className="relative w-full h-[100vh] overflow-hidden">
-  {/* 🖼️ Background Banner */}
-  <img
-    src="/n-slider.png"
-    alt="Home Banner"
-    className="w-full h-full object-cover"
-  />
+        {slidesData.map((slide) => (
+          <SwiperSlide key={slide.id}>
+            <div className="relative w-full h-full">
+              {/* Background Image */}
+              <img
+                src={slide.image}
+                alt={slide.title1}
+                className="w-full h-full object-cover"
+              />
 
-  <div className="absolute inset-0 z-[1]" />
+              {/* Overlay */}
+              <div className="absolute inset-0 bg-black/5"></div>
 
-  {/* 🟩 Foreground Content (Text & Image Sections) */}
-  <div className="absolute inset-0 flex flex-col md:flex-row items-center md:items-center justify-between w-full min-h-full px-4 sm:px-8 md:px-16 z-[2]">
-    {/* Text Section */}
-  <motion.div
-  className="hero-text-section"
-  initial={{ y: -50, opacity: 0, scale: 0.95 }}
-  whileInView={{ y: 0, opacity: 1, scale: 1 }}
-  transition={{ duration: 1, ease: 'easeOut' }}
-  viewport={{ once: false, amount: 0.3 }}
->
-  <h3 className="hero-subtitle">DESIGN TEAM</h3>
-
-  <h2 className="hero-title">
-    That Care About <br /> Every Tiny Little Detail.
-  </h2>
-
-  <p className="hero-desc">
-    We don't just make it look good — we make it make sense. <br />
-    Every pixel enhances your brand.
-  </p>
-
-  <div className="hero-btn">
-    <Link
-      to="/"
-      className="hero-link"
-    >
-      Download Portfolio <GoArrowUpRight className="text-xl sm:text-2xl" />
-    </Link>
-  </div>
-</motion.div>
-
-
-    {/* Image Section (hidden for now) */}
-    <div className="hidden md:flex w-[60%] justify-center md:justify-end items-center">
-      {/* <img
-        src="/n-slider.png"
-        alt="Home Banner"
-        className="w-full md:w-[90%] h-auto object-contain"
-      /> */}
-    </div>
-  </div>
-</div>
-
-
-        </SwiperSlide>
-
-        {/* Slide 2 */}
-        {/* <SwiperSlide>
-          <div className="relative w-full h-full">
-            <img
-              src="/slider1.jpg"
-              alt="Home Banner"
-              className="w-full h-full object-cover shadow-lg"
-            />
-            <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
-              <motion.h2
-                  className="text-2xl sm:text-3xl md:text-4xl lg:text-[55px] font-bold text-white mb-4 leading-snug sm:leading-tight"
-
-                initial={{ y: -60, opacity: 0, scale: 0.95 }}
-                whileInView={{ y: 0, opacity: 1, scale: 1 }}
-                transition={{ duration: 1.5, ease: "easeOut" }}
-                viewport={{ once: false, amount: 0.3 }}
+              {/* Content */}
+              <div
+                className="absolute inset-0 flex flex-col justify-center items-center sm:items-start
+                px-5 sm:px-10 md:px-16 lg:px-24 text-white z-10
+                text-center sm:text-left sm:justify-center gap-3"
               >
-                Welcome To Arhan Entertainment
-              </motion.h2>
-              <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white mb-6 drop-shadow max-w-[90%] sm:max-w-xl">
+                <motion.div
+                  initial={{ y: -40, opacity: 0, scale: 0.95 }}
+                  whileInView={{ y: 0, opacity: 1, scale: 1 }}
+                  transition={{ duration: 1, ease: "easeOut" }}
+                  viewport={{ once: false, amount: 0.3 }}
+                  className="w-full sm:w-[90%] md:w-[80%] lg:max-w-2xl mx-auto sm:mx-0"
+                >
+                  {/* Subtitle */}
+                  <h3 className="text-[12px] sm:text-sm md:text-[16px] lg:text-lg font-semibold tracking-wide mb-2 sm:mb-3">
+                    {slide.subtitle}
+                  </h3>
 
-                Your creative partner for branding, video, and more.
-              </p>
-              <button className="px-4 sm:px-6 md:px-8 py-2 sm:py-3 bg-indigo-600 text-white rounded-lg font-medium sm:font-semibold shadow hover:bg-indigo-700 transition">
+                  {/* Titles */}
+                  <h1 className="text-[26px] sm:text-[34px] md:text-[50px] lg:text-[68px] font-bold leading-tight">
+                    {slide.title1}
+                  </h1>
+                  <h2 className="text-[22px] sm:text-[30px] md:text-[44px] lg:text-[60px] text-white font-semibold leading-tight">
+                    {slide.title2}
+                  </h2>
+                  <h3 className="text-[20px] sm:text-[26px] md:text-[40px] lg:text-[54px] text-white font-semibold mb-4 sm:mb-6">
+                    {slide.title3}
+                  </h3>
 
-                Get Started
-              </button>
+                  {/* Paragraph */}
+                  <p className="text-[12px] sm:text-[14px] md:text-[17px] lg:text-[20px] leading-relaxed mb-5 sm:mb-6 text-gray-200">
+                    {slide.description}
+                  </p>
+
+                  {/* Button */}
+                  <Link
+                    to={slide.buttonLink}
+                    className="inline-flex items-center gap-1 sm:gap-2 border border-indigo-100 hover:bg-indigo-700 
+                    transition px-3 py-2 sm:px-5 sm:py-3 rounded-md sm:rounded-lg font-medium 
+                    text-[12px] sm:text-[14px] md:text-[15px] lg:text-[20px] text-white"
+                  >
+                    {slide.buttonText}
+                    <GoArrowUpRight className="text-sm sm:text-base md:text-lg lg:text-xl" />
+                  </Link>
+                </motion.div>
+              </div>
             </div>
-          </div>
-        </SwiperSlide> */}
+          </SwiperSlide>
+        ))}
       </Swiper>
 
       {/* Down Arrow */}
-      <div className="absolute bottom-10 inset-x-0 flex justify-center z-[100]">
+      <div className="absolute bottom-6 inset-x-0 flex justify-center z-20">
         <Link to="/about">
-          <FaAnglesDown className="text-xl sm:text-4xl md:text-3xl animate-bounce text-white drop-shadow-lg" />
+          <FaAnglesDown className="text-2xl sm:text-3xl md:text-4xl animate-bounce text-white drop-shadow-lg" />
         </Link>
       </div>
     </section>
+ 
    
   </>
     

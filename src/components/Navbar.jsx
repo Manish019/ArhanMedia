@@ -62,7 +62,7 @@ useEffect(() => {
 
         {/* Desktop Navigation */}
           <nav
-          className={`hidden md:flex items-center gap-10 sm:text-lg md:text-[14px] lg:text-[18px] xl:text-[18px]  transition-colors duration-300 ${
+          className={`hidden md:flex items-center gap-10 sm:text-lg md:text-[14px] lg:text-[18px] xl:text-[20px]  transition-colors duration-300 ${
             isScrolled ? "text-[#193568]" : "text-white" 
           }`}
         >
@@ -128,7 +128,7 @@ useEffect(() => {
     if (isTablet) setWorkOpen(!workOpen);
   }}
 >
-  <button className="flex items-center gap-1 hover:text-indigo-600 focus:outline-none uppercase">
+  <button className="flex items-center gap-1  focus:outline-none uppercase">
     Work <ChevronDown size={16} />
   </button>
 
@@ -145,7 +145,7 @@ useEffect(() => {
   >
     <Link
       to="/work/creative-design"
-      className="border-b border-gray-500 block px-4 py-2 hover:bg-indigo-600 hover:text-white"
+      className="border-b border-gray-500 block px-4 py-2 hover:bg-indigo-600  hover:text-white"
     >
       Creative Direction
     </Link>
@@ -179,7 +179,7 @@ useEffect(() => {
 
           <Link
             to="/clients"
-            className="hover:text-indigo-600 uppercase"
+            className=" uppercase"
           >
             Client
           </Link>
