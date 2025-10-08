@@ -91,13 +91,13 @@ const HomeSlider = () => {
     transition={{ duration: 1, ease: "easeOut" }}
     viewport={{ once: false, amount: 0.3 }}
     className="
-      w-full sm:w-[90%] md:w-[700px] lg:w-[700px]
+      w-full sm:w-[90%] md:w-[700px] lg:w-[650px]
       mx-auto sm:mx-0 lg:mt-5 inner-section
       text-left  
     "
   >
     {/* Subtitle */}
-    <h3 className="text-[12px] sm:text-sm md:text-[16px] lg:text-[30px] tracking-wide mb-2 sm:mb-3">
+    <h3 className="text-[12px] sm:text-sm md:text-[16px] lg:text-[20px] tracking-wide mb-2 sm:mb-3">
       {slide.subtitle}
     </h3>
 
@@ -107,7 +107,7 @@ const HomeSlider = () => {
     </h1>
 
     {/* Paragraph */}
-    <p className="text-[12px] sm:text-[14px] md:text-[20px] lg:text-[28px] leading-light mb-5 sm:mb-6 text-gray-200">
+    <p className="text-[12px] sm:text-[14px] md:text-[20px] lg:text-[18px] leading-light mb-5 sm:mb-6 text-gray-200">
       {slide.description}
     </p>
 
@@ -116,7 +116,7 @@ const HomeSlider = () => {
       to={slide.buttonLink}
       className="inline-flex items-center gap-1 sm:gap-2 border border-indigo-100 hover:bg-indigo-700 
       transition px-3 py-2 sm:px-5 sm:py-3 rounded-md sm:rounded-lg font-medium 
-      text-[12px] sm:text-[14px] md:text-[15px] lg:text-[20px] text-white"
+      text-[12px] sm:text-[14px] md:text-[15px] lg:text-[16px] text-white"
     >
       {slide.buttonText}
       <GoArrowUpRight className="text-sm sm:text-base md:text-lg lg:text-xl" />
