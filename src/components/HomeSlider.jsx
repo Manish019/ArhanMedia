@@ -91,9 +91,9 @@ const HomeSlider = () => {
     transition={{ duration: 1, ease: "easeOut" }}
     viewport={{ once: false, amount: 0.3 }}
     className="
-      w-full sm:w-[90%] md:w-[800px] lg:w-[750px]
+      w-full sm:w-[90%] md:w-[700px] lg:w-[700px]
       mx-auto sm:mx-0 lg:mt-5 inner-section
-      text-left  /* 👈 ensure mobile text alignment */
+      text-left  
     "
   >
     {/* Subtitle */}

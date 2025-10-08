@@ -66,5 +66,15 @@
 
 
 
+@media (min-width: 1024px) {
+  /* desktop and larger screens ke liye CSS */
+.inner-section{
+  width: 750px !important;
+
+}
+}
+
+
+
 
 
