@@ -21,9 +21,7 @@ const slidesData = [
     id: 1,
     image: "/n-slider.png",
     subtitle: "DESIGN TEAM",
-    title1: "That Care About",
-    title2: "Every Tiny Little",
-    title3: "Detail.",
+    title1: "That Cares About Every Tiny Little Detail.",
     description:
       "We don't just make it look good — we make it make sense. Every pixel enhances your brand.",
     buttonText: "Download Portfolio",
@@ -31,11 +29,9 @@ const slidesData = [
   },
   {
     id: 2,
-    image: "/slider2.jpg",
+    image: "/n-slider.png",
     subtitle: "CREATIVE STUDIO",
-    title1: "Turning Ideas",
-    title2: "Into Stunning",
-    title3: "Reality.",
+    title1: "That Cares About Every Tiny Little Detail.",
     description:
       "We craft visually appealing experiences that connect emotionally and drive results.",
     buttonText: "Explore Work",
@@ -43,11 +39,10 @@ const slidesData = [
   },
   {
     id: 3,
-    image: "/slider3.jpg",
+   image: "/n-slider.png",
     subtitle: "DIGITAL EXPERTS",
-    title1: "Design. Build.",
-    title2: "Deliver",
-    title3: "Delight.",
+    title1: "That Cares About Every Tiny Little Detail.",
+
     description:
       "From concept to launch — we create meaningful digital experiences that inspire action.",
     buttonText: "Learn More",
@@ -79,54 +74,56 @@ const HomeSlider = () => {
               />
 
               {/* Overlay */}
-              <div className="absolute inset-0 bg-black/5"></div>
+              <div className="absolute inset-0"></div>
 
               {/* Content */}
               <div
-                className="absolute inset-0 flex flex-col justify-center items-center sm:items-start
-                px-5 sm:px-10 md:px-16 lg:px-24 text-white z-10
-                text-center sm:text-left sm:justify-center gap-3"
-              >
-                <motion.div
-                  initial={{ y: -40, opacity: 0, scale: 0.95 }}
-                  whileInView={{ y: 0, opacity: 1, scale: 1 }}
-                  transition={{ duration: 1, ease: "easeOut" }}
-                  viewport={{ once: false, amount: 0.3 }}
-                  className="w-full sm:w-[90%] md:w-[80%] lg:max-w-2xl mx-auto sm:mx-0 lg:mt-5"
-                >
-                  {/* Subtitle */}
-                  <h3 className="text-[12px] sm:text-sm md:text-[16px] lg:text-lg font-semibold tracking-wide mb-2 sm:mb-3">
-                    {slide.subtitle}
-                  </h3>
+  className="
+    absolute inset-0 flex flex-col justify-center items-start  /* 👈 default = left */
+    sm:items-start
+    px-5 sm:px-10 md:px-16 lg:px-24 text-white z-10
+    text-left sm:text-left sm:justify-center gap-3
+  "
+>
+  <motion.div
+    initial={{ y: -40, opacity: 0, scale: 0.95 }}
+    whileInView={{ y: 0, opacity: 1, scale: 1 }}
+    transition={{ duration: 1, ease: "easeOut" }}
+    viewport={{ once: false, amount: 0.3 }}
+    className="
+      w-full sm:w-[90%] md:w-[800px] lg:w-[750px]
+      mx-auto sm:mx-0 lg:mt-5 inner-section
+      text-left  /* 👈 ensure mobile text alignment */
+    "
+  >
+    {/* Subtitle */}
+    <h3 className="text-[12px] sm:text-sm md:text-[16px] lg:text-[30px] tracking-wide mb-2 sm:mb-3">
+      {slide.subtitle}
+    </h3>
 
-                  {/* Titles */}
-                  <h1 className="text-[26px] sm:text-[34px] md:text-[50px] lg:text-[60px] font-bold leading-tight">
-                    {slide.title1}
-                  </h1>
-                  <h2 className="text-[22px] sm:text-[30px] md:text-[44px] lg:text-[50px] text-white font-semibold leading-tight">
-                    {slide.title2}
-                  </h2>
-                  <h3 className="text-[20px] sm:text-[26px] md:text-[40px] lg:text-[45px] text-white font-semibold mb-4 sm:mb-6">
-                    {slide.title3}
-                  </h3>
+    {/* Titles */}
+    <h1 className="text-[26px] sm:text-[34px] md:text-[65px] lg:text-[74px] leading-tight md:leading-tight mb-2 ">
+      {slide.title1}
+    </h1>
 
-                  {/* Paragraph */}
-                  <p className="text-[12px] sm:text-[14px] md:text-[17px] lg:text-[20px] leading-relaxed mb-5 sm:mb-6 text-gray-200">
-                    {slide.description}
-                  </p>
+    {/* Paragraph */}
+    <p className="text-[12px] sm:text-[14px] md:text-[20px] lg:text-[28px] leading-light mb-5 sm:mb-6 text-gray-200">
+      {slide.description}
+    </p>
 
-                  {/* Button */}
-                  <Link
-                    to={slide.buttonLink}
-                    className="inline-flex items-center gap-1 sm:gap-2 border border-indigo-100 hover:bg-indigo-700 
-                    transition px-3 py-2 sm:px-5 sm:py-3 rounded-md sm:rounded-lg font-medium 
-                    text-[12px] sm:text-[14px] md:text-[15px] lg:text-[20px] text-white"
-                  >
-                    {slide.buttonText}
-                    <GoArrowUpRight className="text-sm sm:text-base md:text-lg lg:text-xl" />
-                  </Link>
-                </motion.div>
-              </div>
+    {/* Button */}
+    <Link
+      to={slide.buttonLink}
+      className="inline-flex items-center gap-1 sm:gap-2 border border-indigo-100 hover:bg-indigo-700 
+      transition px-3 py-2 sm:px-5 sm:py-3 rounded-md sm:rounded-lg font-medium 
+      text-[12px] sm:text-[14px] md:text-[15px] lg:text-[20px] text-white"
+    >
+      {slide.buttonText}
+      <GoArrowUpRight className="text-sm sm:text-base md:text-lg lg:text-xl" />
+    </Link>
+  </motion.div>
+</div>
+
             </div>
           </SwiperSlide>
         ))}

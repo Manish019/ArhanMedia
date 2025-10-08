@@ -8,8 +8,7 @@
 
   .slider-section p {
     font-size: 0.85rem !important; /* text-sm */
-    max-width: 90%;
-    margin: 0 auto 1rem auto;
+    max-width: 100%;
   }
 
   .slider-section button {
@@ -36,19 +35,36 @@
 }
 
 /* For tablets (641px - 1024px) */
-@media (min-width: 641px) and (max-width: 1024px) {
-  .slider-section h2 {
-    font-size: 2.2rem !important; /* text-3xl */
+@media (min-width: 641px) and (max-width: 1023px) {
+  .inner-section{
+   width: 600px !important;
+  }
+
+  
+  .slider-section h1 {
+    font-size: 45px !important; /* text-3xl */
   }
 
   .slider-section p {
-    font-size: 1.2rem !important;
+    font-size: 25px !important;
   }
 
-  .slider-section button {
+  /* .slider-section button {
     font-size: 1rem !important;
     padding: 10px 22px !important;
-  }
+  } */
 }
+
+/* @media (min-width: 1024px){
+.inner-section h1{
+          font-size: 65px !important;
+
+}
+
+
+} */
+
+
+
 
 

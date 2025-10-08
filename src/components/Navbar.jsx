@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Menu, ChevronDown } from "lucide-react";
 // import { HiOutlineArrowUturnRight } from "react-icons/hi2";
 import { HiArrowUturnLeft } from "react-icons/hi2";
+import { BiMenuAltRight } from "react-icons/bi";
 
 
 import "./Navbar.css";
@@ -213,7 +214,7 @@ useEffect(() => {
   }`}
 >
   {!mobileOpen ? (
-    <Menu size={26} />
+    <BiMenuAltRight  className="text-5xl font-light"  />
   ) : (
     <HiArrowUturnLeft
       className={`w-9 h-9 transition-colors duration-300 ${
