@@ -187,7 +187,7 @@ useEffect(() => {
 
           <Link
             to="/connect-us"
-                        className="hover:text-indigo-600 uppercase"
+                        className=" uppercase"
 
           >
             Connect us
