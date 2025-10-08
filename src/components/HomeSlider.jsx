@@ -102,7 +102,7 @@ const HomeSlider = () => {
     </h3>
 
     {/* Titles */}
-    <h1 className="text-[26px] sm:text-[34px] md:text-[65px] lg:text-[74px] leading-tight md:leading-tight mb-2 ">
+    <h1 className="text-[26px] sm:text-[34px] md:text-[65px]  leading-tight md:leading-tight mb-2 ">
       {slide.title1}
     </h1>
 
