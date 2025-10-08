@@ -24,6 +24,8 @@ li, span, a, :hover {
   margin-bottom: 20px;
 }
 
+
+
 .clients .swiper-pagination-bullet {
   background-color: #4f46e5; /* bullet color */
   opacity: 1;
@@ -39,4 +41,9 @@ bottom: 0px !important;
 
   .pressbox{
      box-shadow: -1px -4px 9px #2a4e9f61;
+  }
+
+  .homeslider .swiper-pagination-bullet-active{
+    background-color: #fff !important;  /* bullet color */
+  opacity: 1;
   }

@@ -66,7 +66,7 @@ const HomeSlider = () => {
         autoplay={{ delay: 3500, disableOnInteraction: false }}
         pagination={{ clickable: true }}
         modules={[Autoplay, Pagination]}
-        className="w-full h-[70vh] sm:h-[75vh] md:h-[85vh] lg:h-screen"
+        className="w-full h-[70vh] sm:h-[75vh] md:h-[85vh] lg:h-screen homeslider"
       >
         {slidesData.map((slide) => (
           <SwiperSlide key={slide.id}>
