@@ -92,7 +92,7 @@ const HomeSlider = () => {
                   whileInView={{ y: 0, opacity: 1, scale: 1 }}
                   transition={{ duration: 1, ease: "easeOut" }}
                   viewport={{ once: false, amount: 0.3 }}
-                  className="w-full sm:w-[90%] md:w-[80%] lg:max-w-2xl mx-auto sm:mx-0"
+                  className="w-full sm:w-[90%] md:w-[80%] lg:max-w-2xl mx-auto sm:mx-0 lg:mt-5"
                 >
                   {/* Subtitle */}
                   <h3 className="text-[12px] sm:text-sm md:text-[16px] lg:text-lg font-semibold tracking-wide mb-2 sm:mb-3">
@@ -100,13 +100,13 @@ const HomeSlider = () => {
                   </h3>
 
                   {/* Titles */}
-                  <h1 className="text-[26px] sm:text-[34px] md:text-[50px] lg:text-[68px] font-bold leading-tight">
+                  <h1 className="text-[26px] sm:text-[34px] md:text-[50px] lg:text-[60px] font-bold leading-tight">
                     {slide.title1}
                   </h1>
-                  <h2 className="text-[22px] sm:text-[30px] md:text-[44px] lg:text-[60px] text-white font-semibold leading-tight">
+                  <h2 className="text-[22px] sm:text-[30px] md:text-[44px] lg:text-[50px] text-white font-semibold leading-tight">
                     {slide.title2}
                   </h2>
-                  <h3 className="text-[20px] sm:text-[26px] md:text-[40px] lg:text-[54px] text-white font-semibold mb-4 sm:mb-6">
+                  <h3 className="text-[20px] sm:text-[26px] md:text-[40px] lg:text-[45px] text-white font-semibold mb-4 sm:mb-6">
                     {slide.title3}
                   </h3>
 
