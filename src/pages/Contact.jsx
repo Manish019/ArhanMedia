@@ -35,11 +35,7 @@ const Contact = ({ cities }) => {
 initial={{ y: -50, opacity: 0 }}   // 👈 upar se aayega
   whileInView={{ y: 0, opacity: 1 }} // final position
   transition={{ duration: 1, ease: "easeOut" }}
-  viewport={{ once: false, amount: 0.3 }}
-
-
->
-
+  viewport={{ once: false, amount: 0.3 }}>
 
 
     <h2 className="flex text-3xl font-bold mb-6 items-center justify-center text-[#193568] ">India Location</h2>

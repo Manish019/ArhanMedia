@@ -1,0 +1,197 @@
+/* Base orbit animation setup */
+.orbit {
+  transform-origin: center;
+}
+
+/* Orbit rotation speeds */
+.orbit-slow {
+  animation: rotate 60s ease-in-out infinite;
+}
+
+.orbit-medium {
+  animation: rotate 45s ease-in-out infinite;
+}
+
+.orbit-fast {
+  animation: rotate 30s ease-in-out infinite;
+  animation-direction: reverse;
+}
+
+/* Smooth circular rotation */
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(180deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Fade in/out effect for orbit images */
+.orbit img {
+  animation: fadeInOut 5s ease-in-out infinite;
+  opacity: 0.8; /* default opacity */
+}
+
+/* =============== Show-Hide Zoom Animation =============== */
+.orbit-zoom {
+  animation: zoomInOut 6s ease-in-out infinite;
+  transform-origin: center;
+}
+
+/* The zoom + fade animation */
+@keyframes zoomInOut {
+  0% {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+  20% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+  80% {
+    opacity: 0.7;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+}
+
+/* Optional: make each orbit type have a different rhythm */
+.orbit-slow .orbit-zoom {
+  animation-duration: 8s;
+}
+.orbit-medium .orbit-zoom {
+  animation-duration: 6s;
+}
+.orbit-fast .orbit-zoom {
+  animation-duration: 4.5s;
+}
+
+
+/* Gentle zoom in/out for orbit images */
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); } /* zoom in 20% */
+}
+
+/* Orbit border fade in/out */
+.orbit-border {
+  animation: fadeCircle 6s ease-in-out infinite;
+  opacity: 0.9; /* default opacity */
+}
+
+/* Random fade in/out */
+@keyframes fadeInOut {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+/* Orbit circle fade in/out */
+@keyframes fadeCircle {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+@keyframes orbitZoom {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.4;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+}
+.inner-orbit .orbit-border {
+  animation: orbitZoom 15s infinite;
+  animation-delay: 0s; /* starts first */
+}
+
+.middle-orbit .orbit-border {
+  animation: orbitZoom 15s infinite;
+  animation-delay: 5s; /* starts after 5 sec */
+}
+
+.outer-orbit .orbit-border {
+  animation: orbitZoom 15s infinite;
+  animation-delay: 10s; /* starts after 10 sec */
+}
+@keyframes orbitZoom {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.4;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.9;
+  }
+}
+
+.orbit-border {
+  transition: transform 0.3s ease-in-out;
+}
+/* ---------- Image Size Adjustment ---------- */
+img[alt="orbit"] {
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  img[alt="orbit"] {
+    width: 25px !important;
+    height: 25px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  img[alt="orbit"] {
+    width: 26px !important;
+    height: 26px !important;
+  }
+}
+
+
+/* 🖥️ Desktop (≥1024px) */
+@media (min-width: 1024px) {
+  .inner-orbit {
+    width: 60%;
+  }
+  .middle-orbit {
+    width: 80%;
+  }
+  .outer-orbit {
+    width: 100%;
+  }
+}
+
+/* 💻 Tablet (768px–1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .inner-orbit {
+    width: 50%;
+  }
+   .middle-orbit {
+    width: 65%;
+  }
+   .outer-orbit {
+    width: 80%;
+  }
+}
+
+/* 📱 Mobile (<768px) */
+@media (max-width: 767px) {
+  .inner-orbit {
+    width: 50%;
+  }
+   .middle-orbit {
+    width: 70%;
+  }
+  .outer-orbit {
+    width: 85%;
+  }
+   img[alt="outer-orbit"] {
+    width: 26px !important;
+    height: 26px !important;
+  }
+}

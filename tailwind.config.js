@@ -13,6 +13,7 @@ module.exports = {
       },
         animation: {
           slideDown: 'slideDown 2.5s ease-in-out 5s',
+          
       },
     },
   },

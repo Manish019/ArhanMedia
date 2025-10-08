@@ -9,7 +9,6 @@ import { Link } from 'react-router-dom';
 import ClientSlider from '../components/ClientSlider';
 import Services from '../components/Services';
 import { motion } from "framer-motion";
-import Testimonial from './Testimonial';
 // import TestimonialSlider from './Testimonial';
 
 
@@ -200,7 +199,6 @@ const Home = () => {
   <ClientSlider />
 </div> */}
 
-<Testimonial />
   
 
 </section>

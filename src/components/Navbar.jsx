@@ -50,25 +50,25 @@ useEffect(() => {
           : "bg-transparent"
       }`}
     >
-  <div className="max-w-7xl mx-auto px-6 lg:px-8 py-4 flex items-center justify-between">
+  <div className="max-w-8xl mx-auto px-6 lg:px-20 py-4 flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2">
-          <img
-            src="/Arhan-logo.svg"
-            alt="Arham Entertainment Logo"
-            className="h-13 md:h-16 w-auto"
-          />
-        </Link>
+  <img
+    src={isScrolled ? "/Arhan-logo.svg" : "/w-logo.png"}
+    alt="Arham Entertainment Logo"
+    className="h-13 md:h-16 w-auto transition-all duration-300"
+  />
+</Link>
 
         {/* Desktop Navigation */}
           <nav
-          className={`hidden md:flex items-center gap-10 sm:text-lg md:text-[14px] lg:text-[18px] xl:text-[18px] font-semibold transition-colors duration-300 ${
+          className={`hidden md:flex items-center gap-10 sm:text-lg md:text-[14px] lg:text-[18px] xl:text-[18px]  transition-colors duration-300 ${
             isScrolled ? "text-[#193568]" : "text-white" 
           }`}
         >
           <Link
             to="/"
-            className="hover:text-indigo-600 font-bold uppercase"
+            className=" uppercase"
           >
             Home
           </Link>
@@ -82,13 +82,13 @@ useEffect(() => {
   }}
 >
   <button
-    className="flex items-center gap-1 hover:text-indigo-600 uppercase font-semibold"
+    className="flex items-center gap-1  uppercase "
   >
     About Us <ChevronDown size={16} />
   </button>
 
   <div
-    className={`submenu absolute left-0 mt-2 w-44 shadow-md transition-all duration-300
+    className={`submenu absolute left-0 mt-2 w-44 shadow-md transition-all duration-300 text-[16px]
       ${isScrolled ? "bg-white" : "bg-[#193568]"}
       ${
         isTablet
@@ -128,12 +128,12 @@ useEffect(() => {
     if (isTablet) setWorkOpen(!workOpen);
   }}
 >
-  <button className="flex items-center gap-1 hover:text-indigo-600 focus:outline-none uppercase font-semibold">
+  <button className="flex items-center gap-1 hover:text-indigo-600 focus:outline-none uppercase">
     Work <ChevronDown size={16} />
   </button>
 
   <div
-    className={`submenu absolute left-0 mt-2 w-[220px] shadow-md transition-all duration-300
+    className={`submenu absolute left-0 mt-2 w-[220px] shadow-md transition-all duration-300 text-[16px]
       ${isScrolled ? "bg-white" : "bg-[#193568]"}
       ${
         isTablet
@@ -145,31 +145,31 @@ useEffect(() => {
   >
     <Link
       to="/work/creative-design"
-      className="border-b border-gray-500 text-[20px] block px-4 py-2 hover:bg-indigo-600 hover:text-white"
+      className="border-b border-gray-500 block px-4 py-2 hover:bg-indigo-600 hover:text-white"
     >
       Creative Direction
     </Link>
     <Link
       to="/services/app"
-      className="border-b border-gray-500 text-[20px] block px-4 py-2 hover:bg-indigo-600 hover:text-white"
+      className="border-b border-gray-500 block px-4 py-2 hover:bg-indigo-600 hover:text-white"
     >
       Branding
     </Link>
     <Link
       to="/services/marketing"
-      className="border-b border-gray-500 text-[20px] block px-4 py-2 hover:bg-indigo-600 hover:text-white"
+      className="border-b border-gray-500 block px-4 py-2 hover:bg-indigo-600 hover:text-white"
     >
       Social Media
     </Link>
     <Link
       to="/services/videos"
-      className="border-b border-gray-500 text-[20px] block px-4 py-2 hover:bg-indigo-600 hover:text-white"
+      className="border-b border-gray-500 block px-4 py-2 hover:bg-indigo-600 hover:text-white"
     >
       Videos
     </Link>
     <Link
       to="/services/ai-studio"
-      className="border-b border-gray-500 text-[20px] block px-4 py-2 hover:bg-indigo-600 hover:text-white"
+      className="border-b border-gray-500 block px-4 py-2 hover:bg-indigo-600 hover:text-white"
     >
       AI Studio
     </Link>
@@ -179,14 +179,14 @@ useEffect(() => {
 
           <Link
             to="/clients"
-            className="hover:text-indigo-600 uppercase font-semibold"
+            className="hover:text-indigo-600 uppercase"
           >
             Client
           </Link>
 
           <Link
             to="/connect-us"
-                        className="hover:text-indigo-600 uppercase font-semibold"
+                        className="hover:text-indigo-600 uppercase"
 
           >
             Connect us
@@ -194,7 +194,7 @@ useEffect(() => {
         </nav>
 
         {/* Mobile Hamburger */}
-        <button
+        {/* <button
           onClick={() => setMobileOpen(!mobileOpen)}
           className={`md:hidden z-50 relative ${
         isScrolled ? "text-black" : "text-white"
@@ -204,7 +204,24 @@ useEffect(() => {
           ) : (
             <HiArrowUturnLeft className="w-9 h-9 text-indigo-600" />
           )}
-        </button>
+            
+        </button> */}
+        <button
+  onClick={() => setMobileOpen(!mobileOpen)}
+  className={`md:hidden z-50 relative transition-colors duration-300 ${
+    isScrolled ? "text-indigo-600" : "text-white"
+  }`}
+>
+  {!mobileOpen ? (
+    <Menu size={26} />
+  ) : (
+    <HiArrowUturnLeft
+      className={`w-9 h-9 transition-colors duration-300 ${
+        isScrolled ? "text-indigo-600" : "text-white"
+      }`}
+    />
+  )}
+</button>
       </div>
 
       {/* Mobile Menu */}

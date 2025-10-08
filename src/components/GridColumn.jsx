@@ -1,6 +1,6 @@
 import React from "react";
 
-const GridColumn = () => {
+const GridColumn = ({teamMembers}) => {
   return (
     <>
       <section>
@@ -120,8 +120,43 @@ const GridColumn = () => {
         </section>
         {/* 8 */}
       </section>
+       <div className="w-full max-w-7xl mx-auto px-4 py-12">
+  {/* Section Heading */}
+  <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-10 uppercase text-[#193568]">
+    Our Team
+  </h2>
+
+  {/* Team Grid */}
+  <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-items-center">
+    {teamMembers.map((member, index) => (
+      <div
+        key={index}
+        className="flex flex-col items-center text-center group"
+      >
+        {/* Circle Image Box */}
+        <div className="relative w-48 h-48 sm:w-52 sm:h-52 md:w-56 md:h-56 lg:w-64 lg:h-64 rounded-full border-4 border-gray-200 shadow-lg overflow-hidden transition-all duration-500 group-hover:shadow-2xl group-hover:border-[#193568] bg-white">
+          <img
+            src={member.img}
+            alt={member.name}
+            className="w-full h-full object-cover rounded-full transition-all duration-500 group-hover:scale-105"
+          />
+        </div>
+
+        {/* Text Info */}
+        <div className="mt-4 bg-[#193568] px-5 py-2 rounded-md transition-all duration-300 group-hover:bg-indigo-700">
+          <h3 className="text-lg sm:text-xl font-semibold text-white">
+            {member.name}
+          </h3>
+          <p className="text-white text-sm sm:text-base">{member.role}</p>
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
     </>
   );
 };
 
 export default GridColumn;
+
+

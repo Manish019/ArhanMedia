@@ -37,19 +37,29 @@ const About = () => {
      
      {/* Image Column (40%) */}
       <motion.div
-        className="md:w-3/5 shadow-lg rounded-xl p-6 aspect-w-16 aspect-h-9"
-        initial={{ x: 100, opacity: 0 }}
-        whileInView={{ x: 0, opacity: 1 }}
-        transition={{ duration: 1, ease: 'easeOut' }}
-        viewport={{ once: false, amount: 0.3 }}
-      >
-    <iframe src="https://player.vimeo.com/video/146022717?color=0c88dd&title=0&byline=0&portrait=0&badge=0" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-      </motion.div>
+  className="w-full md:w-3/5 rounded-xl overflow-hidden shadow-[ -1px_-4px_9px_#2a4e9f61] p-0"
+  initial={{ x: 100, opacity: 0 }}
+  whileInView={{ x: 0, opacity: 1 }}
+  transition={{ duration: 1, ease: 'easeOut' }}
+  viewport={{ once: false, amount: 0.3 }}
+>
+  {/* ✅ Responsive Aspect Ratio Wrapper */}
+  <div className="relative w-full pt-[56.25%]"> {/* 16:9 ratio → (9/16 * 100)% = 56.25% */}
+    <iframe
+      src="https://player.vimeo.com/video/146022717?color=0c88dd&title=0&byline=0&portrait=0&badge=0"
+      className="absolute top-0 left-0 w-full h-full rounded-xl"
+      frameBorder="0"
+      allow="autoplay; fullscreen; picture-in-picture"
+      allowFullScreen
+      title="About Arham Entertainment"
+    ></iframe>
+  </div>
+</motion.div>
   
   
       <div className="p-6 w-full md:w-2/5">
         <motion.h2
-          className="text-4xl sm:text-3xl md:text-2xl lg:text-[40px] font-bold text-[#193568] leading-tight mb-5"
+       className="text-2xl sm:text-3xl md:text-4xl lg:text-[45px] font-bold text-[#193568] leading-tight mb-5"
           initial={{ x: -100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 1, ease: 'easeOut' }}

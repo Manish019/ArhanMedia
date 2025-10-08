@@ -2,6 +2,9 @@ import React from "react";
 import aboutImg from '../assets/about-us.jpg';
 import ClientSlider from "../components/ClientSlider";
 import GridColumn from "../components/GridColumn";
+import Testimonial from './Testimonial';
+import { motion } from "framer-motion";
+
 
 
 
@@ -27,12 +30,21 @@ function Client() {
 
  <section className="w-full py-10 ">
       <div className="max-w-6xl mx-auto px-4">
-    <h2 className="text-3xl font-bold text-center mb-8 uppercase text-gray-800">
-      Clients
-    </h2>
+    <motion.h2 className="text-3xl font-bold text-center mb-8 text-[#193568]"
+     initial={{ x: -100, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{ duration: 1 }}
+                viewport={{ once: false, amount: 0.3 }}
+    
+    >
+     Our Partner
+    </motion.h2>
 
     <ClientSlider />
   </div>
+
+  <Testimonial />
+
 </section>
      {/* <GridColumn /> */}
    </>

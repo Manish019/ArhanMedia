@@ -15,7 +15,7 @@ const Testimonial = () => {
       <div className="max-w-6xl mx-auto px-4">
         {/* Heading */}
         <motion.h2
-          className="text-center text-3xl sm:text-4xl lg:text-[55px] font-bold text-[#193568] leading-tight mb-10"
+          className="text-center text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#193568] leading-tight mb-10"
           initial={{ y: -50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 1, ease: "easeOut" }}
