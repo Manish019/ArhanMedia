@@ -27,27 +27,27 @@ const slidesData = [
     buttonText: "Download Portfolio",
     buttonLink: "/",
   },
-  {
-    id: 2,
-    image: "/n-slider.png",
-    subtitle: "CREATIVE STUDIO",
-    title1: "That Cares About Every Tiny Little Detail.",
-    description:
-      "We craft visually appealing experiences that connect emotionally and drive results.",
-    buttonText: "Explore Work",
-    buttonLink: "/portfolio",
-  },
-  {
-    id: 3,
-   image: "/n-slider.png",
-    subtitle: "DIGITAL EXPERTS",
-    title1: "That Cares About Every Tiny Little Detail.",
+  // {
+  //   id: 2,
+  //   image: "/n-slider.png",
+  //   subtitle: "CREATIVE STUDIO",
+  //   title1: "That Cares About Every Tiny Little Detail.",
+  //   description:
+  //     "We craft visually appealing experiences that connect emotionally and drive results.",
+  //   buttonText: "Explore Work",
+  //   buttonLink: "/portfolio",
+  // },
+  // {
+  //   id: 3,
+  //  image: "/n-slider.png",
+  //   subtitle: "DIGITAL EXPERTS",
+  //   title1: "That Cares About Every Tiny Little Detail.",
 
-    description:
-      "From concept to launch — we create meaningful digital experiences that inspire action.",
-    buttonText: "Learn More",
-    buttonLink: "/about",
-  },
+  //   description:
+  //     "From concept to launch — we create meaningful digital experiences that inspire action.",
+  //   buttonText: "Learn More",
+  //   buttonLink: "/about",
+  // },
 ];
 const HomeSlider = () => {
 
