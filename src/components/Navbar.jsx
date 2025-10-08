@@ -62,7 +62,7 @@ useEffect(() => {
 
         {/* Desktop Navigation */}
           <nav
-          className={`hidden md:flex items-center gap-10 sm:text-lg md:text-[14px] lg:text-[18px] xl:text-[20px]  transition-colors duration-300 ${
+          className={`hidden md:flex items-center gap-10 sm:text-lg md:text-[14px] lg:text-[18px] xl:text-[18px]  transition-colors duration-300 ${
             isScrolled ? "text-[#193568]" : "text-white" 
           }`}
         >
