@@ -96,7 +96,7 @@ const Testing = () => {
               onTouchEnd={() => swiperRef.current?.autoplay.start()}
             >
               <img src={member.img} alt={member.name} className="team-image" />
-              <div className="overlay">
+              <div className="team-text mb-5">
                 <h2>{member.name}</h2>
                 <p>{member.role}</p>
               </div>
