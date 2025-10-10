@@ -18,8 +18,8 @@
 }
 
 .testing .swiper-slide {
-  width: 280px;
-  height: 380px;
+  width: 300px;
+  height: 450px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -68,6 +68,7 @@
   font-size: 0.95rem;
   opacity: 0.85;
   margin-top: 5px;
+  padding: 10px;
 }
 
 /* Optional: hover effect to brighten overlay */
