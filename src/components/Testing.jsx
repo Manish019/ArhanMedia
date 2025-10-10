@@ -1,6 +1,7 @@
 import React from 'react';
-import './Testing.css';
+import './testing.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { motion } from "framer-motion";
 
 // Import Swiper styles
 import 'swiper/css';
@@ -51,7 +52,12 @@ const teamMembers = [
 const Testing = () => {
   return (
     <div className="testing-container">
-      <h1 className="heading">Clients Testimonials</h1>
+ <motion.h2
+       className="text-2xl sm:text-3xl md:text-4xl lg:text-[45px] font-bold text-[#193568]  mb-5"
+          initial={{ x: -100, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1, ease: 'easeOut' }}
+          viewport={{ once: false, amount: 0.3 }}>Clients Testimonials</motion.h2>
 
       <Swiper
         effect={"coverflow"}
