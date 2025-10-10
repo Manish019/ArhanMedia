@@ -71,9 +71,9 @@ const Testing = () => {
         slidesPerView={"auto"}
         coverflowEffect={{
           rotate: 20,
-          stretch: -10,
+          stretch: -50,
           depth: 200,
-          modifier: 1,
+          modifier: 1.2,
           slideShadows: true,
         }}
         pagination={{ clickable: true }}
