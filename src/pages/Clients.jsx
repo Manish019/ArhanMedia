@@ -4,6 +4,7 @@ import ClientSlider from "../components/ClientSlider";
 import GridColumn from "../components/GridColumn";
 import Testimonial from './Testimonial';
 import { motion } from "framer-motion";
+import Testing from "../components/Testing";
 
 
 
@@ -43,9 +44,12 @@ function Client() {
     <ClientSlider />
   </div>
 
-  <Testimonial />
-
+  {/* <Testimonial /> */}
+  
+ <Testing />
 </section>
+ 
+
      {/* <GridColumn /> */}
    </>
   );

@@ -118,7 +118,7 @@ const HomeSlider = () => {
 
   {/* Right Column - Image (Hidden on mobile) */}
   <motion.div
-    className="w-full md:w-1/2 flex justify-center md:justify-end hidden md:flex"
+    className="w-full md:w-1/2 flex justify-center md:justify-start hidden md:flex"
     initial={{ x: 100, opacity: 0 }}
     whileInView={{ x: 0, opacity: 1 }}
     transition={{ duration: 1, ease: "easeOut" }}
