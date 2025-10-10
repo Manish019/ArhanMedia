@@ -8,6 +8,7 @@ import forigenLocating from "../Data/Forigen-Locating.js";
 import UpCommingLocation from "../components/UpCommingLocation";
 import aboutImg from '../assets/about-us.jpg';
 import { motion } from "framer-motion";
+import Form from "../components/Form.jsx";
 
 
 
@@ -165,75 +166,7 @@ initial={{ y: -50, opacity: 0 }}   // 👈 upar se aayega
   <div className="flex flex-col md:flex-row gap-6">
     
     {/* Left Column - Form */}
-    <motion.div className="flex-1 bg-[#193568] text-white p-6 rounded-lg shadow-lg"
-    
-     initial={{ x: -100, opacity: 0 }}
-    whileInView={{ x: 0, opacity: 1 }}
-    transition={{ duration: 1, ease: "easeOut" }}
-    viewport={{ once: false, amount: 0.3 }}
-    
-    >
-       <form  className="max-w-sm mx-auto">
-      <div className="mb-5">
-        <label className="block mb-2 text-sm font-medium text-white">
-          Enter Your Name
-        </label>
-        <input
-          type="text"
-          name="user_name"
-          className="shadow-xs bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5"
-          placeholder="Enter Your Name"
-          required
-        />
-      </div>
-
-      <div className="mb-5">
-        <label className="block mb-2 text-sm font-medium text-white">
-          Enter Your Email
-        </label>
-        <input
-          type="email"
-          name="user_email"
-          className="shadow-xs bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5"
-          placeholder="Enter Your Email"
-          required
-        />
-      </div>
-
-      <div className="mb-5">
-        <label className="block mb-2 text-sm font-medium text-white">
-          Your Phone Number
-        </label>
-        <input
-          type="text"
-          name="user_phone"
-          className="shadow-xs bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5"
-          placeholder="Enter Number"
-          required
-        />
-      </div>
-
-      <div className="mb-5">
-        <label className="block mb-2 text-sm font-medium text-white">
-          Your Message
-        </label>
-        <textarea
-          name="message"
-          rows="4"
-          className="shadow-xs bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5"
-          placeholder="Write your message here..."
-          required
-        ></textarea>
-      </div>
-
-      <button
-        type="submit"
-        className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center cursor-pointer"
-      >
-        Submit
-      </button>
-    </form>
-    </motion.div>
+   <Form />
 
     {/* Right Column - Map */}
     <motion.div className="flex-1 p-6 rounded-lg shadow-lg"
