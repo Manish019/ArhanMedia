@@ -24,7 +24,7 @@ const slidesData = [
     title1: "That Cares About Every Tiny Little Detail.",
     description:
       "We don't just make it look good — we make it make sense. Every pixel enhances your brand.",
-    buttonText: "Download Portfolio",
+    buttonText: "Explore Design",
     buttonLink: "/",
   },
   {
@@ -34,8 +34,8 @@ const slidesData = [
     title1: "That Cares About Every Tiny Little Detail.",
     description:
       "We craft visually appealing experiences that connect emotionally and drive results.",
-    buttonText: "Explore Work",
-    buttonLink: "/portfolio",
+    buttonText: "Explore Campaign",
+    buttonLink: "/",
   },
   {
     id: 3,
@@ -45,7 +45,7 @@ const slidesData = [
 
     description:
       "From concept to launch — we create meaningful digital experiences that inspire action.",
-    buttonText: "Learn More",
+    buttonText: "Explore Portfolio",
     buttonLink: "/about",
   },
 ];
@@ -58,7 +58,7 @@ const HomeSlider = () => {
      <Swiper
   slidesPerView={1}
   loop={true}
-  autoplay={{ delay: 3500, disableOnInteraction: false }}
+  autoplay={{ delay: 10000, disableOnInteraction: false }}
   pagination={{
     el: ".custom-pagination",
     clickable: true,
@@ -72,16 +72,22 @@ const HomeSlider = () => {
   modules={[Autoplay, Pagination, Navigation]}
   className="w-full h-[70vh] sm:h-[75vh] md:h-[85vh] lg:h-screen homeslider relative"
 >
-  {slidesData.map((slide) => (
-    <SwiperSlide key={slide.id}>
-      <div className="relative w-full h-full">
-        {/* Background */}
-        <img
-          src={slide.image}
-          alt={slide.title1}
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-black/5"></div>
+{slidesData.map((slide, index) => (
+  <SwiperSlide key={slide.id}>
+  {({ isActive }) => (
+    <div className="relative w-full h-full">
+      {/* Background */}
+      <motion.img
+        src={slide.image}
+        alt={slide.title1}
+        className="w-full h-full object-cover"
+        initial={{ scale: 1.2, opacity: 1 }}
+        animate={isActive ? { scale: 1, opacity: 1 } : { scale: 1.2, opacity: 0 }}
+        transition={{ duration: 10, ease: "easeOut" }} // match slide duration
+      />
+
+      
+        {/* <div className="absolute inset-0 bg-black/1"></div> */}
 
         {/* Content */}
        <div className="absolute inset-0 flex flex-col md:flex-row items-center md:items-center justify-center px-5 sm:px-10 md:px-16 lg:px-24 z-10 text-white gap-5">
@@ -118,22 +124,29 @@ const HomeSlider = () => {
 
   {/* Right Column - Image (Hidden on mobile) */}
   <motion.div
-    className="w-full md:w-1/2 flex justify-center md:justify-start hidden md:flex"
-    initial={{ x: 100, opacity: 0 }}
-    whileInView={{ x: 0, opacity: 1 }}
-    transition={{ duration: 1, ease: "easeOut" }}
-    viewport={{ once: false, amount: 0.3 }}
-  >
-    <img
-      src="./bottel.png"
-      alt="bottel"
-      className="w-full max-w-[400px] md:max-w-[400px] object-cover rounded-lg"
-    />
-  </motion.div>
+  className="w-full md:w-1/2 flex justify-center md:justify-center hidden md:flex"
+  initial={{ x: 100, opacity: 0 }}
+  whileInView={{ x: 0, opacity: 1 }}
+  transition={{ duration: 1, ease: "easeOut" }}
+  viewport={{ once: false, amount: 0.3 }}
+>
+  <motion.img
+    src="./bottel.png"
+    alt="bottel"
+    className="w-full max-w-[400px] md:max-w-[400px] object-cover rounded-lg origin-center"
+    initial={{ rotate: 0 }}
+    animate={{ rotate: 25, rotateX: 5, rotateY: 5 }}
+    transition={{ duration: 5, ease: "easeInOut" }}
+  />
+</motion.div>
+
+
+
 </div>
 
 
       </div>
+      )}
     </SwiperSlide>
   ))}
 

@@ -99,7 +99,7 @@ const Form = () => {
         Submit
       </button>
     </form>
-    <span className='mt-5 px-10'>{result}</span>
+    <span className='mt-5 px-5'>{result}</span>
     </motion.div>
 
 </>

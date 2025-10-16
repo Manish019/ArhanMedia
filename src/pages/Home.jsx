@@ -2,7 +2,7 @@ import React from 'react'
 import About from './About'
 import ComingSoon from './ComingSoon'
 import HomeSlider from '../components/HomeSlider'
-import aboutUsImg1 from "../assets/Image/about-img.jpg";
+import aboutUsImg1 from "../assets/about-us.jpg";
 import Button from '@mui/material/Button';
 import { LineChart } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -73,20 +73,22 @@ const Home = () => {
         </motion.div>
       </div>
   
-      {/* Image Column (40%) */}
-      <motion.div
-        className="md:w-2/5 shadow-lg rounded-xl p-6"
-        initial={{ x: 100, opacity: 0 }}
-        whileInView={{ x: 0, opacity: 1 }}
-        transition={{ duration: 1, ease: 'easeOut' }}
-        viewport={{ once: false, amount: 0.3 }}
-      >
-        <img
-          src={aboutUsImg1}
-          alt="About Us"
-          className="w-full h-[250px] sm:h-[300px] md:h-[400px] object-cover rounded-lg"
-        />
-      </motion.div>
+      {/* Image Column (40%) Zoom + Move Slightly Up (Parallax feel) */}
+     <motion.div
+  className="md:w-2/5 shadow-lg rounded-xl p-4 overflow-hidden"
+  initial={{ x: 100, opacity: 0 }}
+  whileInView={{ x: 0, opacity: 1 }}
+  transition={{ duration: 1, ease: 'easeOut' }}
+  viewport={{ once: false, amount: 0.3 }}
+>
+  <img
+    src={aboutUsImg1}
+    alt="About Us"
+    className="w-full h-[250px] sm:h-[300px] md:h-[600px] object-cover rounded-lg transition-transform duration-700 ease-in-out hover:scale-110 hover:-translate-y-2"
+  />
+</motion.div>
+
+
     </div>
 
       {/* End About */}
@@ -94,32 +96,7 @@ const Home = () => {
     
     
   </div>
-        {/* services */}
-
-   {/* <div class="container mx-auto p-4">
-     <motion.h2
-          className="text-2xl sm:text-3xl md:text-4xl lg:text-[55px] font-bold text-[#193568] leading-tight mb-5"
-          initial={{ x: -100, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
-          transition={{ duration: 1, ease: 'easeOut' }}
-          viewport={{ once: false, amount: 0.3 }}
-        >
-          What We Do
-
-        </motion.h2>
-  <div class="flex flex-col sm:flex-col md:flex-row gap-4">
-    <div class="flex-1 p-6">
-
-    
-    </div>
- 
-
-   
-  </div>
-  </div> */}
-  <Services />
-
-<div className="container mx-auto px-4 py-8">
+  <div className="container mx-auto px-4 py-8">
   <div className="flex flex-col-reverse md:flex-row items-center gap-8">
 
     {/* 📝 Text Column (Left on desktop, bottom on mobile) */}
@@ -131,21 +108,24 @@ const Home = () => {
         transition={{ duration: 1, ease: 'easeOut' }}
         viewport={{ once: false, amount: 0.3 }}
       >
-        About <br /> Arham Entertainment
+       Arham Entertainment
       </motion.h2>
-
-      <motion.p
-        className="text-sm sm:text-base md:text-lg text-gray-700 mb-6 text-center md:text-left"
+      <motion.div className="text-sm sm:text-base md:text-[15px] mb-6 text-center md:text-left space-y-4 text-blue-900"
         initial={{ x: 100, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
         transition={{ duration: 1, ease: 'easeOut' }}
-        viewport={{ once: false, amount: 0.3 }}
-      >
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. At doloremque
-        maiores corrupti laborum minima recusandae necessitatibus iusto fugit,
-        ab, error mollitia quo neque accusamus.
-      </motion.p>
+        viewport={{ once: false, amount: 0.3 }}>
+      <p>
+       We are an brand partners offering integrated advertising, high end content production and 360 degree marketing and branding solutions tailored to niche markets.
 
+      </p>
+      <p>Blending classic strategy with contemporary creativity, we specialise in end 2 end brand building though content creation, identity design, and Digital campaigns to media planning, experiential marketing and performance analytics .
+</p>
+<p>Our in-house production capabilities and cross platform expertise ensure seamless execution and storytelling as our strength lies in crafting cohesive brand stories,ensuring consistency,impact and connection across every touch point-
+</p>
+
+      </motion.div>
+     
       <motion.div
         className="flex justify-center md:justify-start"
         initial={{ y: 50, opacity: 0 }}
@@ -157,7 +137,7 @@ const Home = () => {
           to="/about"
           className="inline-block bg-[#193568] hover:bg-indigo-700 text-white px-6 py-2 rounded-full shadow-md hover:shadow-lg uppercase font-semibold transition-all duration-300"
         >
-          Learn More
+          Our Journey
         </Link>
       </motion.div>
     </div>
@@ -183,6 +163,32 @@ const Home = () => {
     </motion.div>
   </div>
 </div>
+        {/* services */}
+
+   {/* <div class="container mx-auto p-4">
+     <motion.h2
+          className="text-2xl sm:text-3xl md:text-4xl lg:text-[55px] font-bold text-[#193568] leading-tight mb-5"
+          initial={{ x: -100, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1, ease: 'easeOut' }}
+          viewport={{ once: false, amount: 0.3 }}
+        >
+          What We Do
+
+        </motion.h2>
+  <div class="flex flex-col sm:flex-col md:flex-row gap-4">
+    <div class="flex-1 p-6">
+
+    
+    </div>
+ 
+
+   
+  </div>
+  </div> */}
+  <Services />
+
+
 
 
   {/* <div className="container mx-auto w-full px-10 overflow-hidden">
