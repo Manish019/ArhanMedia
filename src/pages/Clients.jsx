@@ -40,7 +40,6 @@ function Client() {
     >
      Our Partner
     </motion.h2>
-
     <ClientSlider />
   </div>
 

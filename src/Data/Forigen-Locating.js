@@ -1,4 +1,4 @@
-import mumbai from '../assets/india-gate.png';
+import mumbai from '../assets/dubai.png';
 
 
 const forigenLocating = [

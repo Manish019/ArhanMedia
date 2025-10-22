@@ -56,10 +56,11 @@ initial={{ y: -50, opacity: 0 }}   // 👈 upar se aayega
           : "border-bg-indigo-600 hover:bg-indigo-600"
       }`}
     >
-      <div className="text-3xl mb-2">
-        <img src={city.icon} alt={city.name} className="w-25 h-25" />
+      <div className="mb-0 mt-0">
+        <img src={city.icon} alt={city.name} className="w-30 h-30" />
+      
+      <p className="text-[25px] font-normal text-white text-center mt-0">{city.name}</p>
       </div>
-      <p className="font-semibold text-white">{city.name}</p>
       <div className="icons mt-4 text-2xl animate-bounce duration-500 text-white">
         <FaAnglesDown />
       </div>

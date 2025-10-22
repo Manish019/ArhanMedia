@@ -74,17 +74,18 @@ const HomeSlider = () => {
 >
 {slidesData.map((slide, index) => (
   <SwiperSlide key={slide.id}>
-  {({ isActive }) => (
-    <div className="relative w-full h-full">
-      {/* Background */}
-      <motion.img
-        src={slide.image}
-        alt={slide.title1}
-        className="w-full h-full object-cover"
-        initial={{ scale: 1.2, opacity: 1 }}
-        animate={isActive ? { scale: 1, opacity: 1 } : { scale: 1.2, opacity: 0 }}
-        transition={{ duration: 10, ease: "easeOut" }} // match slide duration
-      />
+    {({ isActive }) => (
+      <div className="relative w-full h-full">
+        {/* Background */}
+        <motion.img
+          key={isActive ? 'active' : 'inactive'} // Add this line
+          src={slide.image}
+          alt={slide.title1}
+          className="w-full h-full object-cover"
+          initial={{ scale: 1.1, opacity: 1 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 8, ease: "easeOut" }}
+        />
 
       
         {/* <div className="absolute inset-0 bg-black/1"></div> */}
@@ -162,7 +163,6 @@ const HomeSlider = () => {
 
   <button className="custom-next text-sm sm:text-base font-semibold tracking-widest hover:text-indigo-400 transition-all flex items-center gap-2">
         <span className="block w-20 h-[1px] bg-gray-300"></span> {/* small line after NEXT */}
-
     NEXT
   </button>
 </div>

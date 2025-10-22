@@ -27,9 +27,9 @@ const Footer = () => {
        
         <Link to="/" className="flex items-center gap-2">
           <img
-            src="/Arhan-logo.svg"
+                  src="/w-logo.png"
             alt="Arham Entertainment Logo"
-            className="h-15 md:h-16 w-auto"
+            className="h-15 md:h-20 w-auto"
           />
         </Link>
         <div className="social-icons flex space-x-2 mt-4 text-3xl">
