@@ -2,7 +2,7 @@ import React from "react";
 import About from "./About";
 import ComingSoon from "./ComingSoon";
 import HomeSlider from "../components/HomeSlider";
-import aboutUsImg1 from "../assets/about-us.jpg";
+import aboutUsImg1 from "../assets/about-pic1.jpg";
 // import Button from "@mui/material/Button";
 // import { LineChart } from "lucide-react";
 import { Link } from "react-router-dom";
