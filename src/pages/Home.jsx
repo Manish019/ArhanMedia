@@ -193,7 +193,7 @@ const Home = () => {
   
   </div> */}
         {/* <Services /> */}
-        <Testing />
+        {/* <Testing /> */}
          {/* <ClientSlider /> */}
         {/* <div className="container mx-auto w-full px-10 overflow-hidden">
   <motion.h2
