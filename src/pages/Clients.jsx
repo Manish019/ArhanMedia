@@ -5,6 +5,8 @@ import GridColumn from "../components/GridColumn";
 import Testimonial from './Testimonial';
 import { motion } from "framer-motion";
 import Testing from "../components/Testing";
+import OurPartner from "../components/OurPartner";
+
 
 
 
@@ -42,6 +44,23 @@ function Client() {
     </motion.h2>
     <ClientSlider />
   </div> */}
+
+        <div className="max-w-6xl mx-auto px-4">
+          <motion.h2 className="text-2xl sm:text-3xl text-center md:text-4xl lg:text-[45px] font-bold text-[#193568]  mb-5"
+            initial={{ x: -100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: false, amount: 0.3 }}
+
+          >
+            Our Partner
+          </motion.h2>
+<OurPartner />
+
+        </div>
+
+
+
 
   {/* <Testimonial /> */}
   
