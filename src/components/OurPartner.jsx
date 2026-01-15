@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import "./OuterPartner.css";
+import "./OurPartner.css";
 
 
 const logos = [
