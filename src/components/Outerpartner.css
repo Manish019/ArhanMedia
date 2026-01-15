@@ -1,9 +1,9 @@
 .partner-item {
   position: relative;
-  display: flex;
+  /* display: flex; */
   align-items: center;
   justify-content: center;
-  min-height: 220px;
+  /* min-height: 220px; */
 }
 
 /* ✅ Vertical line – fixed & balanced */

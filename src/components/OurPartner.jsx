@@ -25,19 +25,28 @@ const OurPartner = () => {
                 src={logo.src}
                 alt={logo.alt}
                 className="
-      relative z-10
-      max-w-[220px]
-      object-contain
-      transition-transform duration-300
-      group-hover:scale-110
-    "
-                animate={{ rotate: [0, 360] }}
+    relative z-10
+    max-w-[220px]
+    object-contain
+  "
+                initial={{
+                  y: -120,
+                  scale: 0.5,
+                  opacity: 0,
+                }}
+                animate={{
+                  y: [-120, 0, 0, 0],
+                  scale: [0.5, 1, 1.2, 0.5],
+                  opacity: [0, 1, 1, 0],
+                }}
                 transition={{
-                  duration: 8,
-                  ease: "linear",
-                  // repeat: Infinity,
+                  duration: 4,
+                  ease: "easeInOut",
+                  repeat: Infinity,
+                  repeatDelay: 1,
                 }}
               />
+
 
             </div>
           ))}
