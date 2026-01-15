@@ -1,0 +1,29 @@
+.partner-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 220px;
+}
+
+/* ✅ Vertical line – fixed & balanced */
+.partner-item::before {
+  content: "";
+  position: absolute;
+  top: 28px;
+  bottom: 28px;
+  right: 28px;          /* fixed inset */
+  width: 1px;
+  background: rgba(90, 75, 20, 0.6);
+}
+
+/* ❌ NO CHANGE – exactly same */
+.partner-item::after {
+  content: "";
+  position: absolute;
+  left: 6px;
+  right: 60px;
+  bottom: 0px;
+  height: 1px;
+  background: rgba(90, 75, 20, 0.6);
+}
