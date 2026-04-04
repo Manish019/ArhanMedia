@@ -4,6 +4,7 @@ import { ChevronDown } from "lucide-react";
 import { HiArrowUturnLeft } from "react-icons/hi2";
 import { BiMenuAltRight } from "react-icons/bi";
 import "./Navbar.css";
+import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -135,25 +136,25 @@ useEffect(() => {
                   Creative Direction
                 </Link>
                 <Link
-                  to="/services/app"
+                  to="/work/app"
                   className="border-b border-gray-500 block px-4 py-2 hover:bg-indigo-600 hover:text-white"
                 >
                   Branding
                 </Link>
                 <Link
-                  to="/services/marketing"
+                  to="/work/marketing"
                   className="border-b border-gray-500 block px-4 py-2 hover:bg-indigo-600 hover:text-white"
                 >
                   Social Media
                 </Link>
                 <Link
-                  to="/services/videos"
+                  to="/work/videos"
                   className="border-b border-gray-500 block px-4 py-2 hover:bg-indigo-600 hover:text-white"
                 >
                   Videos
                 </Link>
                 <Link
-                  to="/services/ai-studio"
+                  to="/work/ai-studio"
                   className="border-b border-gray-500 block px-4 py-2 hover:bg-indigo-600 hover:text-white"
                 >
                   AI Studio

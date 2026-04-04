@@ -19,6 +19,7 @@ import teamMembers from "./Data/Team.js";
 import './App.css'
 import CreativeDesign from "./pages/CreativeDesign.jsx";
 import PressRealese from "./pages/PressRealese.jsx";
+import Videos from "./pages/Videos.jsx";
 
 function App() {
 
@@ -38,6 +39,8 @@ function App() {
         <Route path="clients" element={<Clients />} />
 <Route path="/work/creative-design" element={<CreativeDesign />} />
 <Route path="/about/press-release" element={<PressRealese />} />
+<Route path="/work/videos" element={<Videos />} />
+
 
 
 
