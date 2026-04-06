@@ -106,7 +106,7 @@ const Footer = () => {
 
 {/* Column 3 - Contact (Green Box) */}
 <div className="bg-[#4f39f600] p-4 rounded-xl shadow-sm relative">
-  <div className="absolute top-0 left-0 w-16 h-1 bg-green-500 rounded-tr-xl rounded-bl-xl"></div>
+  <div className="absolute top-0 left-0 w-16 h-1 bg-white rounded-tr-xl rounded-bl-xl"></div>
   <h2 className="mt-3 mb-4 text-md font-semibold text-white uppercase">
     Head Office
   </h2>
