@@ -51,12 +51,9 @@ const Videos = () => {
       id="D6ryv26qA-I"
       title="Rick Astley - Never Gonna Give You Up"
     />
-    
-    
 
     </div>
     
-
   </div>
    
    </>

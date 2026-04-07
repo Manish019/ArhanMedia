@@ -72,7 +72,8 @@ useEffect(() => {
               }}
             >
               <button className="flex items-center gap-1 uppercase">
-                About Us <ChevronDown size={16} />
+                About Us 
+                {/* <ChevronDown size={16} /> */}
               </button>
 
               <div
@@ -115,11 +116,12 @@ useEffect(() => {
               }}
             >
               <button className="flex items-center gap-1 uppercase focus:outline-none">
-                Work <ChevronDown size={16} />
+                Work 
+                {/* <ChevronDown size={16} /> */}
               </button>
 
               <div
-                className={`submenu absolute left-0 mt-2 w-[220px] shadow-md transition-all duration-300 text-[16px]
+                className={`submenu absolute left-0 mt-2 w-[220px] shadow-md transition-all duration-300 text-[14px]
                 ${isScrolled ? "bg-white" : "bg-[#193568]"}
                 ${
                   isTablet
@@ -133,19 +135,19 @@ useEffect(() => {
                   to="/work/creative-design"
                   className="border-b border-gray-500 block px-4 py-2 hover:bg-indigo-600 hover:text-white"
                 >
-                  Creative Direction
+                Ad Release (ATL/BTL/TTL)
                 </Link>
                 <Link
                   to="/work/app"
                   className="border-b border-gray-500 block px-4 py-2 hover:bg-indigo-600 hover:text-white"
                 >
-                  Branding
+                  AI Studio
                 </Link>
                 <Link
                   to="/work/marketing"
                   className="border-b border-gray-500 block px-4 py-2 hover:bg-indigo-600 hover:text-white"
                 >
-                  Social Media
+                  Animation (2D)
                 </Link>
                 <Link
                   to="/work/videos"
@@ -157,7 +159,43 @@ useEffect(() => {
                   to="/work/ai-studio"
                   className="border-b border-gray-500 block px-4 py-2 hover:bg-indigo-600 hover:text-white"
                 >
-                  AI Studio
+                  Branding
+                </Link>
+                <Link
+                  to="/work/ai-studio"
+                  className="border-b border-gray-500 block px-4 py-2 hover:bg-indigo-600 hover:text-white"
+                >
+                  Campaign
+                </Link>
+                <Link
+                  to="/work/ai-studio"
+                  className="border-b border-gray-500 block px-4 py-2 hover:bg-indigo-600 hover:text-white"
+                >
+                  Casting
+                </Link>
+                <Link
+                  to="/work/ai-studio"
+                  className="border-b border-gray-500 block px-4 py-2 hover:bg-indigo-600 hover:text-white"
+                >
+                  Digital Media
+                </Link>
+                <Link
+                  to="/work/ai-studio"
+                  className="border-b border-gray-500 block px-4 py-2 hover:bg-indigo-600 hover:text-white"
+                >
+                  Renders (3D)
+                </Link>
+                <Link
+                  to="/work/ai-studio"
+                  className="border-b border-gray-500 block px-4 py-2 hover:bg-indigo-600 hover:text-white"
+                >
+                  UI/UX
+                </Link>
+                <Link
+                  to="/work/ai-studio"
+                  className="border-b border-gray-500 block px-4 py-2 hover:bg-indigo-600 hover:text-white"
+                >
+                  Creative Direction
                 </Link>
               </div>
             </div>
