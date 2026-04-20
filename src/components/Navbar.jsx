@@ -153,10 +153,10 @@ useEffect(() => {
                   to="/work/videos"
                   className="border-b border-gray-500 block px-4 py-2 hover:bg-indigo-600 hover:text-white"
                 >
-                  Videos
+                  Creative Direction
                 </Link>
                 <Link
-                  to="/work/ai-studio"
+                  to="/work/branding"
                   className="border-b border-gray-500 block px-4 py-2 hover:bg-indigo-600 hover:text-white"
                 >
                   Branding
@@ -191,12 +191,12 @@ useEffect(() => {
                 >
                   UI/UX
                 </Link>
-                <Link
+                {/* <Link
                   to="/work/ai-studio"
                   className="border-b border-gray-500 block px-4 py-2 hover:bg-indigo-600 hover:text-white"
                 >
                   Creative Direction
-                </Link>
+                </Link> */}
               </div>
             </div>
 
@@ -299,38 +299,68 @@ useEffect(() => {
                 </button>
                 <div
                   className={`ml-4 overflow-hidden transition-all duration-300 ${
-                    workOpen ? "max-h-50" : "max-h-0"
+                    workOpen ? "max-h-100" : "max-h-0"
                   }`}
                 >
                   <Link
                     to="/work/creative-design"
                     className="block py-2 border-b border-gray-500 hover:bg-indigo-50 hover:text-indigo-600 transition-colors"
                   >
-                    Creative Direction
+                Ad Release (ATL/BTL/TTL)
                   </Link>
                   <Link
                     to="/work/branding"
                     className="block py-2 border-b border-gray-500 hover:bg-indigo-50 hover:text-indigo-600 transition-colors"
                   >
-                    Branding
+                   AI Studio
+
                   </Link>
                   <Link
                     to="/work/social-media"
                     className="block py-2 hover:bg-indigo-50 hover:text-indigo-600 transition-colors border-b border-gray-500"
                   >
-                    Social Media
+                  Animation (2D)
                   </Link>
+                 
                   <Link
-                    to="/work/videos"
+                    to="/work/ai-studio"
                     className="block py-2 hover:bg-indigo-50 hover:text-indigo-600 transition-colors border-b border-gray-500"
-                  >
-                    Videos
+                  >Branding
                   </Link>
                   <Link
                     to="/work/ai-studio"
                     className="block py-2 hover:bg-indigo-50 hover:text-indigo-600 transition-colors border-b border-gray-500"
+                  >Campaign
+                  </Link>
+                  <Link
+                    to="/work/ai-studio"
+                    className="block py-2 hover:bg-indigo-50 hover:text-indigo-600 transition-colors border-b border-gray-500"
+                  >Casting
+                  </Link>
+                  <Link
+                    to="/work/ai-studio"
+                    className="block py-2 hover:bg-indigo-50 hover:text-indigo-600 transition-colors border-b border-gray-500"
+                  >     
+                               Digital Media
+
+                  </Link>
+                   <Link
+                    to="/work/ai-studio"
+                    className="block py-2 hover:bg-indigo-50 hover:text-indigo-600 transition-colors border-b border-gray-500"
+                  >                  Reanders (3D)
+
+                  </Link>
+                   <Link
+                    to="/work/ai-studio"
+                    className="block py-2 hover:bg-indigo-50 hover:text-indigo-600 transition-colors border-b border-gray-500"
+                  >                  UI/UX
+
+                  </Link>
+                   <Link
+                    to="/work/videos"
+                    className="block py-2 hover:bg-indigo-50 hover:text-indigo-600 transition-colors border-b border-gray-500"
                   >
-                    AI Studio
+                    Creative Design
                   </Link>
                 </div>
               </div>

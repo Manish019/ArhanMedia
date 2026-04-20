@@ -140,9 +140,6 @@ const HomeSlider = () => {
     transition={{ duration: 5, ease: "easeInOut" }}
   />
 </motion.div>
-
-
-
 </div>
 
 

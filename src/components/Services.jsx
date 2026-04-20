@@ -19,7 +19,6 @@ const Services = () => {
   >
     What We Do
   </motion.h2>
-
   <ServiceSlider />
 </div>
 

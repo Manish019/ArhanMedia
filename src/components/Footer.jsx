@@ -12,7 +12,7 @@ import { motion } from "framer-motion";
 const Footer = () => {
   return (
     <>
-   <footer className="mt-12 border-t border-gray-200 bg-[#05051e]">
+   <footer className="mt-0 border-t border-gray-200 bg-[#05051e]">
   <div className="mx-auto w-full max-w-screen-xl p-5 lg:p-8">
     {/* ✅ Responsive Grid */}
     <motion.div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10"

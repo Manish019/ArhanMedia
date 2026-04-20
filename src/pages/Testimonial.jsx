@@ -8,7 +8,6 @@ import 'swiper/css/pagination';
 import Testimonialdata from "../Data/Client-Testimonial.js";
 import Rating from '@mui/material/Rating';
 // import Stack from '@mui/material/Stack';
-
 const Testimonial = () => {
   return (
     <section className="w-full py-14 bg-gray-50">

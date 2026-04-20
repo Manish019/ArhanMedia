@@ -8,10 +8,6 @@ import Testing from "../components/Testing";
 import OurPartner from "../components/OurPartner";
 
 
-
-
-
-
 function Client() {
 
   return (
@@ -58,9 +54,6 @@ function Client() {
 <OurPartner />
 
         </div>
-
-
-
 
   {/* <Testimonial /> */}
   

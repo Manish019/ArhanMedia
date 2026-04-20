@@ -20,6 +20,7 @@ import './App.css'
 import CreativeDesign from "./pages/CreativeDesign.jsx";
 import PressRealese from "./pages/PressRealese.jsx";
 import Videos from "./pages/Videos.jsx";
+import Branding from "./pages/Branding.jsx";
 
 function App() {
 
@@ -40,8 +41,7 @@ function App() {
 <Route path="/work/creative-design" element={<CreativeDesign />} />
 <Route path="/about/press-release" element={<PressRealese />} />
 <Route path="/work/videos" element={<Videos />} />
-
-
+<Route path="/work/branding" element={<Branding />} />
 
 
 <Route path="/connect-us" element={<Contact cities={cities} />} />
