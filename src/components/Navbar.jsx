@@ -138,16 +138,22 @@ useEffect(() => {
                 Ad Release (ATL/BTL/TTL)
                 </Link>
                 <Link
-                  to="/work/app"
+                  to="/work/ai-studio"
                   className="border-b border-gray-500 block px-4 py-2 hover:bg-indigo-600 hover:text-white"
                 >
                   AI Studio
                 </Link>
                 <Link
-                  to="/work/marketing"
+                  to="/work/animation"
                   className="border-b border-gray-500 block px-4 py-2 hover:bg-indigo-600 hover:text-white"
                 >
                   Animation (2D)
+                </Link>
+                <Link
+                  to="/work/cgi"
+                  className="border-b border-gray-500 block px-4 py-2 hover:bg-indigo-600 hover:text-white"
+                >
+                  CGI
                 </Link>
                 <Link
                   to="/work/videos"
@@ -162,7 +168,7 @@ useEffect(() => {
                   Branding
                 </Link>
                 <Link
-                  to="/work/ai-studio"
+                  to="/work/campaign"
                   className="border-b border-gray-500 block px-4 py-2 hover:bg-indigo-600 hover:text-white"
                 >
                   Campaign
