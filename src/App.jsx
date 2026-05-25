@@ -51,8 +51,6 @@ function App() {
 <Route path="/work/campaign" element={<Campiang />} />
 <Route path="/work/ai-studio" element={<Aistudio />} />
 <Route path="/work/animation" element={<Animation />} />
-
-
 <Route path="/connect-us" element={<Contact cities={cities} />} />
 <Route path="*" element={<NotFound />} />
 {/* <Route path="/coming-soon" element={<ComingSoon />} /> */}
