@@ -315,7 +315,7 @@ useEffect(() => {
                 Ad Release (ATL/BTL/TTL)
                   </Link>
                   <Link
-                    to="/work/branding"
+                    to="/work/ai-studio"
                     className="block py-2 border-b border-gray-500 hover:bg-indigo-50 hover:text-indigo-600 transition-colors"
                   >
                    AI Studio
@@ -329,35 +329,35 @@ useEffect(() => {
                   </Link>
                  
                   <Link
-                    to="/work/ai-studio"
+                    to="/work/branding"
                     className="block py-2 hover:bg-indigo-50 hover:text-indigo-600 transition-colors border-b border-gray-500"
                   >Branding
                   </Link>
                   <Link
-                    to="/work/ai-studio"
+                    to="/work/campaign"
                     className="block py-2 hover:bg-indigo-50 hover:text-indigo-600 transition-colors border-b border-gray-500"
                   >Campaign
                   </Link>
                   <Link
-                    to="/work/ai-studio"
+                    to="/work/casting"
                     className="block py-2 hover:bg-indigo-50 hover:text-indigo-600 transition-colors border-b border-gray-500"
                   >Casting
                   </Link>
                   <Link
-                    to="/work/ai-studio"
+                    to="/work/digital-media"
                     className="block py-2 hover:bg-indigo-50 hover:text-indigo-600 transition-colors border-b border-gray-500"
                   >     
                                Digital Media
 
                   </Link>
                    <Link
-                    to="/work/ai-studio"
+                    to="/work/renders"
                     className="block py-2 hover:bg-indigo-50 hover:text-indigo-600 transition-colors border-b border-gray-500"
                   >                  Reanders (3D)
 
                   </Link>
                    <Link
-                    to="/work/ai-studio"
+                    to="/work/ui-ux"
                     className="block py-2 hover:bg-indigo-50 hover:text-indigo-600 transition-colors border-b border-gray-500"
                   >                  UI/UX
 
