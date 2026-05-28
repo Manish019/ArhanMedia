@@ -1,8 +1,6 @@
 import BrandSection from "../components/BrandSection";
-import { workData } from "../data/workpage";
+import { workData } from "../Data/WorkPage";
 import aboutImg from '../assets/about-us.jpg';
-
-git 
 const Aistudio = () => {
 
   return (
