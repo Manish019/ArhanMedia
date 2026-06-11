@@ -4,7 +4,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
 
-const BrandSection = ({ title, images }) => {
+const BrandSection = ({ title, images, media }) => {
 
   const [popupIndex, setPopupIndex] = useState(null);
 
