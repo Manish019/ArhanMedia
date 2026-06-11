@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { ChevronDown } from "lucide-react";
 import { HiArrowUturnLeft } from "react-icons/hi2";
 import { BiMenuAltRight } from "react-icons/bi";
@@ -7,13 +7,14 @@ import "./Navbar.css";
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 
 const Navbar = () => {
+  const location = useLocation();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [aboutOpen, setAboutOpen] = useState(false);
   const [workOpen, setWorkOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 const [isTablet, setIsTablet] = useState(
   window.matchMedia("(hover: none)").matches
-);window.innerWidth >= 768 && window.innerWidth <= 1366  
+); 
 
   const [showHeader, setShowHeader] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -21,6 +22,7 @@ const [isTablet, setIsTablet] = useState(
   // 🔹 Hide header on scroll down (only for desktop + tablet)
 useEffect(() => {
   const handleScroll = () => {
+    
     const currentScrollY = window.scrollY;
 
     // Hide header after first scroll, regardless of direction
@@ -36,6 +38,12 @@ useEffect(() => {
   window.addEventListener("scroll", handleScroll);
   return () => window.removeEventListener("scroll", handleScroll);
 }, []);
+
+useEffect(() => {
+  setMobileOpen(false);
+  setAboutOpen(false);
+  setWorkOpen(false);
+}, [location.pathname]);
 
   return (
     <div className="relative w-full overflow-x-hidden">
