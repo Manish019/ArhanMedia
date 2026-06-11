@@ -11,9 +11,10 @@ const Navbar = () => {
   const [aboutOpen, setAboutOpen] = useState(false);
   const [workOpen, setWorkOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isTablet, setIsTablet] = useState(
-    window.innerWidth >= 768 && window.innerWidth < 1024
-  );
+const [isTablet, setIsTablet] = useState(
+  window.matchMedia("(hover: none)").matches
+);window.innerWidth >= 768 && window.innerWidth <= 1366  
+
   const [showHeader, setShowHeader] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
