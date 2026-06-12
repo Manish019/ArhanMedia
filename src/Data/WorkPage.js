@@ -23,7 +23,7 @@ export const workData = [
     ],
   },
 {
-title: "  PN Raoa",
+title: "  PN Rao",
     images: [
       "https://i.ibb.co/jk65TKf0/pn-1.jpg",
       "https://i.ibb.co/TBzTdsjD/pn-2.jpg",

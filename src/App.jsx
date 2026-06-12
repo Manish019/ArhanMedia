@@ -13,7 +13,6 @@ import ComingSoon from "./pages/ComingSoon";
 import cities from "./Data/City.js";
 import Team from "./pages/Team";
 import teamMembers from "./Data/Team.js";
-import Campiang from "./pages/Campiang.jsx";
 import Aistudio from "./pages/Aistudio.jsx";
 import Animation from "./pages/animation.jsx";
 // console.log(services);
@@ -25,6 +24,7 @@ import PressRealese from "./pages/PressRealese.jsx";
 import Videos from "./pages/Videos.jsx";
 import Branding from "./pages/Branding.jsx";
 import CGI from "./pages/CGI.jsx";
+import Campaign from "./pages/Campaign.jsx";
 
 function App() {
 
@@ -48,7 +48,7 @@ function App() {
 <Route path="/about/press-release" element={<PressRealese />} />
 <Route path="/work/videos" element={<Videos />} />
 <Route path="/work/branding" element={<Branding />} />
-<Route path="/work/campaign" element={<Campiang />} />
+<Route path="/work/campaign" element={<Campaign />} />
 <Route path="/work/ai-studio" element={<Aistudio />} />
 <Route path="/work/animation" element={<Animation />} />
 <Route path="/connect-us" element={<Contact cities={cities} />} />

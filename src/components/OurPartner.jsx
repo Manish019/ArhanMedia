@@ -25,10 +25,10 @@ const OurPartner = () => {
                 src={logo.src}
                 alt={logo.alt}
                 className="
-    relative z-10
-    max-w-[220px]
-    object-contain
-  "
+                relative z-10
+                max-w-[220px]
+                object-contain
+                "
                 initial={{
                   y: -120,
                   scale: 0.5,
@@ -47,14 +47,11 @@ const OurPartner = () => {
                 }}
               />
 
-
             </div>
           ))}
         </div>
       </div>
     </section>
-
-
   );
 };
 

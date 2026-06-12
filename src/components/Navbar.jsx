@@ -168,7 +168,7 @@ useEffect(() => {
                   to="/work/videos"
                   className="border-b border-gray-500 block px-4 py-2 hover:bg-indigo-600 hover:text-white"
                 >
-                  Creative Direction
+                Creative Direction
                 </Link>
                 <Link
                   to="/work/branding"
