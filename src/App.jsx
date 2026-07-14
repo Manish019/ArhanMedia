@@ -25,6 +25,8 @@ import Videos from "./pages/Videos.jsx";
 import Branding from "./pages/Branding.jsx";
 import CGI from "./pages/CGI.jsx";
 import Campaign from "./pages/Campaign.jsx";
+import Aiskill from "./pages/AIskill.jsx";
+import AImotion from "./pages/AImotion.jsx";
 
 function App() {
 
@@ -46,10 +48,15 @@ function App() {
         <Route path="/work/cgi" element={<CGI />} />
 <Route path="/work/creative-design" element={<CreativeDesign />} />
 <Route path="/about/press-release" element={<PressRealese />} />
+
 <Route path="/work/videos" element={<Videos />} />
 <Route path="/work/branding" element={<Branding />} />
 <Route path="/work/campaign" element={<Campaign />} />
 <Route path="/work/ai-studio" element={<Aistudio />} />
+<Route path="/work/ai-skill" element={<Aiskill />} />
+<Route path="/work/ai-motion" element={<AImotion />} />
+
+
 <Route path="/work/animation" element={<Animation />} />
 <Route path="/connect-us" element={<Contact cities={cities} />} />
 <Route path="*" element={<NotFound />} />

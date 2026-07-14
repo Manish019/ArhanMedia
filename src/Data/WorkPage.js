@@ -1,10 +1,9 @@
-
-//import ImgVideo from "../../assets/Videos/Cgi.mp4";
-
+// import ImgVideo from "../../assets/Videos/Cgi.mp4";
 
 export const workData = [
   {
     title: "Adidas",
+    category: "campaign",
     images: [
       "https://i.ibb.co/xKXWKhL9/Adidas.png",
       "https://i.ibb.co/xKXWKhL9/Adidas.png",
@@ -15,6 +14,7 @@ export const workData = [
 
   {
     title: "Arvind",
+    category: "Aistudio",
     images: [
       "https://i.ibb.co/QjxKcPt8/AD-NM-3.png",
       "https://i.ibb.co/1fs6p33K/adnm-2.jpg",
@@ -22,8 +22,10 @@ export const workData = [
       "https://i.ibb.co/spX4Pbwr/adnm-1.jpg",
     ],
   },
-{
-title: "  PN Rao",
+
+  {
+    title: "PN Rao",
+    category: "campaign",
     images: [
       "https://i.ibb.co/jk65TKf0/pn-1.jpg",
       "https://i.ibb.co/TBzTdsjD/pn-2.jpg",
@@ -33,14 +35,15 @@ title: "  PN Rao",
       "https://i.ibb.co/4RKdjfjV/pn-6.jpg",
     ],
   },
-// {
-//   title: " CGI",
-//     media: [
 
-//       {
-//         type: "video",
-//         url: ImgVideo,
-//       },
-// ],
-// },
+  // {
+  //   title: "CGI",
+  //   category: "campaign",
+  //   media: [
+  //     {
+  //       type: "video",
+  //       url: ImgVideo,
+  //     },
+  //   ],
+  // },
 ];

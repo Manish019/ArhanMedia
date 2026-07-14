@@ -1,7 +1,11 @@
 import BrandSection from "../components/BrandSection";
 import { workData } from "../Data/WorkPage";
 import aboutImg from '../assets/about-us.jpg';
+import { Link } from "react-router-dom";
 const Aistudio = () => {
+  // const aistudioData = workData.filter(
+  //   (item) => item.category === "Aistudio"
+  // );
 
   return (
     <>
@@ -18,17 +22,34 @@ const Aistudio = () => {
           </section>
     <div className="bg-[#516ee5] py-12">
 
-      <div className="max-w-7xl mx-auto px-4">
+     <div className="w-[50%] mx-auto py-12">
+  <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
 
-        {workData.map((item, index) => (
-          <BrandSection
-            key={index}
-            title={item.title}
-            images={item.images}
-          />
-        ))}
+    {/* Left Section */}
+    <div className="rounded-2xl p-8 shadow-lg min-h-[110px] cursor-pointer">
+      <Link to="/work/ai-motion">
+      <h2 className="text-2xl text-white font-bold mb-4">Motion</h2>
 
-      </div>
+      <p className="text-white">
+       Video Creation | Motion Design | VFX and Transitions | Storyboarding | Video Production
+      </p>
+      </Link>
+    </div>
+
+    {/* Right Section */}
+    <div className="rounded-2xl p-8 shadow-lg min-h-[100px] cursor-pointer                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        ">
+     <Link to="/work/ai-skill">
+      <h2 className="text-2xl text-white font-bold mb-4">Skills</h2>
+
+      <p className="text-white">
+        Key Visual Development | Product and Environment Creation | Retouching
+
+      </p>
+      </Link>
+    </div>
+
+  </div>
+</div>
 
     </div>
     </>

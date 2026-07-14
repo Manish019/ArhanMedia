@@ -6,7 +6,7 @@ import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
 
-const Videos = () => {
+const AImotion = () => {
     return (
    <>
     <section
@@ -19,7 +19,7 @@ const Videos = () => {
     
         <div className="w-full max-w-6xl mx-auto py-10 px-4">
     
-        <h1 className="text-2xl md:text-3xl font-bold mb-4 text-white">Creative Direction</h1>
+        <h1 className="text-2xl md:text-3xl font-bold mb-4 text-white">AI Motion</h1>
       </div>
     </section>
 
@@ -60,4 +60,4 @@ const Videos = () => {
   )
 }
 
-export default Videos;
+export default AImotion;
