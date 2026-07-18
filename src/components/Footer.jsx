@@ -161,7 +161,7 @@ const Footer = () => {
     {/* Bottom Bar */}
     <div className="flex flex-row flex-wrap items-center justify-center sm:justify-between text-white text-sm">
       <span className="mb-2 sm:mb-0 text-center sm:text-left">
-        © 2026s{" "}
+        © 2026{" "}
         <Link to="https://arhamentertainment.com/" className="hover:underline">
           Arham Entertainment
         </Link>
