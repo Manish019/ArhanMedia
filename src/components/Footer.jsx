@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link, Links } from 'react-router-dom'
-import { FaSquareFacebook, FaSquareWhatsapp , FaLinkedin, FaSquareInstagram, FaSquareXTwitter   } from "react-icons/fa6";
+// import { FaSquareFacebook, FaSquareWhatsapp , FaLinkedin, FaSquareInstagram, FaSquareXTwitter } from "react-icons/fa6";
 import { FaPhoneAlt } from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";
 import { ImLocation2 } from "react-icons/im";
@@ -25,56 +25,58 @@ const Footer = () => {
       {/* Column 1 - Logo + Social */}
       <div>
        
-        <Link to="/" className="flex items-center gap-2">
-          <img
-                  src="/w-logo.png"
-            alt="Arham Entertainment Logo"
-            className="h-15 md:h-20 w-auto"
-          />
-        </Link>
-        <div className="social-icons flex space-x-2 mt-4 text-3xl">
-           <Link to='https://www.behance.net/7f9823c5' target='_blank'>
+        <Link to="/" className="inline-block mb-6">
+  <img
+    src="/w-logo.png"
+    alt="Logo"
+    className="h-16 md:h-20 w-auto"
+  />
+</Link>
+        <div className="social-icons flex items-center gap-3 mt-0">
+  <Link to="https://www.behance.net/7f9823c5" target="_blank">
     <img
       src="/Follow-logo.png"
-      alt="Arham Entertainment Logo"
-      className="h-5 md:h-7 w-auto mb-2 rounded"
+      alt="Behance"
+      className="w-8 h-10 object-contain transition-transform duration-300 hover:scale-110"
     />
   </Link>
-          <Link to="#" target="_blank">
-            <FaSquareXTwitter className="text-white hover:text-[#1DA1F2] text-3xl" />
-          </Link>
-          <Link to="#" target="_blank">
-            <FaSquareFacebook className="text-[#1877F2] hover:text-[#0c5b9a] text-3xl" />
-          </Link>
-          <Link to="#" target="_blank">
-            <FaLinkedin className="text-[#0077B5] hover:text-[#005582] text-3xl" />
-          </Link>
-          <Link to="https://www.instagram.com/arham_ent/?igsh=MXFnbGkxNTl5ZjhkNA%3D%3D&utm_source=qr#" target="_blank">
-            <FaSquareInstagram className="text-[#C13584] hover:text-[#a32b6d] text-3xl" />
-          </Link>
-          <div className="flex items-center gap-2">
-  <a
-    href="https://wa.me/917483410586"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <FaSquareWhatsapp className="text-green-500 text-3xl hover:text-indigo-500 mt-[-6px]" />
-  </a>
-  {/* <span className="text-white">WhatsApp</span> */}
-</div>
 
-          {/* <li className="flex gap-2 items-center">
-      <FaWhatsapp className="text-green-500 text-lg" />
-      <a
-        href="https://wa.me/917483410586"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="hover:underline hover:text-indigo-500"
-      >
-      
-      </a>
-    </li> */}
-        </div>
+  <Link to="#" target="_blank">
+    <img
+      src="/x.png"
+      alt="X"
+      className="w-8 h-10 object-contain transition-transform duration-300 hover:scale-110"
+    />
+  </Link>
+
+  <Link to="https://www.instagram.com/arham_ent/?igsh=MXFnbGkxNTl5ZjhkNA%3D%3D&utm_source=qr#" target="_blank">
+    <img
+      src="/instagram.png"
+      alt="Instagram"
+      className="w-8 h-10 object-contain transition-transform duration-300 hover:scale-110"
+    />
+  </Link>
+
+  <Link to="#" target="_blank">
+    <img
+      src="/linkedin.png"
+      alt="LinkedIn"
+      className="w-8 h-10 object-contain transition-transform duration-300 hover:scale-110"
+    />
+  </Link>
+
+ <a
+  href="https://wa.me/917483410586"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <img
+    src="/whatsapp.png"
+    alt="WhatsApp"
+    className="w-9 h-10 object-contain transition-transform duration-300 hover:scale-110"
+  />
+</a>
+</div>
       </div>
 
       {/* Column 2 - Work (Blue Box) */}
