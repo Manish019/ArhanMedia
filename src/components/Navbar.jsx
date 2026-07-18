@@ -195,7 +195,7 @@ useEffect(() => {
                   Digital Media
                 </Link>
                 <Link
-                  to="/work/ai-studio"
+                  to="/work/reanders"
                   className="border-b border-gray-500 block px-4 py-2 hover:bg-indigo-600 hover:text-white"
                 >
                   Renders (3D)

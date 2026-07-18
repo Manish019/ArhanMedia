@@ -30,7 +30,6 @@ const AImotion = () => {
       id="CF7bJOwrzPQ"
       title="Rick Astley - Never Gonna Give You Up"
     />
-
     <LiteYouTubeEmbed
       id="cb_ILFlHliM"
       title="Rick Astley - Never Gonna Give You Up"
@@ -51,7 +50,6 @@ const AImotion = () => {
       id="D6ryv26qA-I"
       title="Rick Astley - Never Gonna Give You Up"
     />
-
     </div>
     
   </div>

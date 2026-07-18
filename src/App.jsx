@@ -27,6 +27,7 @@ import CGI from "./pages/CGI.jsx";
 import Campaign from "./pages/Campaign.jsx";
 import Aiskill from "./pages/AIskill.jsx";
 import AImotion from "./pages/AImotion.jsx";
+import Reanders from "./pages/Reanders.jsx";
 
 function App() {
 
@@ -58,6 +59,7 @@ function App() {
 
 
 <Route path="/work/animation" element={<Animation />} />
+<Route path="/work/reanders" element={<Reanders />} />
 <Route path="/connect-us" element={<Contact cities={cities} />} />
 <Route path="*" element={<NotFound />} />
 {/* <Route path="/coming-soon" element={<ComingSoon />} /> */}
