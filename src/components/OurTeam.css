@@ -19,6 +19,7 @@
 .team-card:hover {
   transform: translateY(-8px);
 }
+/* Team Image Styles */
 
 .team-image {
   width: 100%;
