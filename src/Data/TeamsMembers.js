@@ -1,6 +1,6 @@
 // src/data/teamData.js
 
-import shree from '../assets/ourteam/shree.jpeg';
+import shree from '../assets/ourteam/Shree.jpeg';
 import kriti from '../assets/ourteam/KirtiPatil.jpeg';
 import jayjatin from '../assets/ourteam/JayJithinPrakash1.jpeg';
 import Adrija from '../assets/ourteam/Adrija.jpeg';
