@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import "./OurTeam.css";
-import teamMembers from "../data/TeamsMembers";
+import teamMembers from "../Data/TeamsMembers.js";
 
 const OurTeamMember = () => {
   const [showAll, setShowAll] = useState(false);
