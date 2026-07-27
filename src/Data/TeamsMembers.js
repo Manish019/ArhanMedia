@@ -1,6 +1,8 @@
 // src/data/teamData.js
 
-import Shree from '../assets/ourteam/Shree.jpeg';
+import shree from '../assets/ourteam/shree.jpeg';
+
+// import Shree from '../assets/ourteam/Shree.jpeg';
 import kriti from '../assets/ourteam/KirtiPatil.jpeg';
 import jayjatin from '../assets/ourteam/JayJithinPrakash1.jpeg';
 import Adrija from '../assets/ourteam/Adrija.jpeg';
@@ -27,7 +29,7 @@ const teamMembers = [
     id: 1,
     // name: "John Smith",
     // role: "Full Stack Developer",
-    img: Shree,
+    img: shree,
   },
   {
     id: 2,
