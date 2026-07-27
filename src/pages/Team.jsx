@@ -1,6 +1,7 @@
 import React from 'react'
 import aboutImg from '../assets/about-us.jpg';
 import TeamsOrbite from '../components/TeamsOrbite';
+import OurTeamMember from '../components/OurTeamMeamber';
 
 
 const Team = () => {
@@ -22,10 +23,10 @@ const Team = () => {
       
     </section>
 
-   <TeamsOrbite />
+   {/* <TeamsOrbite /> */}
 
 
-
+<OurTeamMember />
 
    
    </>

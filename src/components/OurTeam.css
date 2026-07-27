@@ -1,0 +1,141 @@
+.testing-container {
+  width: 100%;
+  padding: 60px 5%;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.team-card {
+  overflow: hidden;
+  border-radius: 16px;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.team-card:hover {
+  transform: translateY(-8px);
+}
+
+.team-image {
+  width: 100%;
+  height: 400px;
+  object-fit: contain;
+  background: #fff;
+}
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  padding: 20px;
+}
+
+.popup-content {
+  position: relative;
+}
+
+.popup-image {
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 12px;
+  object-fit: contain;
+  animation: zoomIn 0.3s ease;
+}
+
+.close-btn {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background: #fff;
+  color: #000;
+  font-size: 22px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.team-image {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.team-image:hover {
+  transform: scale(1.03);
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .team-image {
+    height: 360px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .team-image {
+    height: 320px;
+  }
+}
+
+
+
+/* ===========================
+   Show More Button
+=========================== */
+
+.show-more-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.show-more-btn {
+  padding: 12px 32px;
+  background: #193568;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.show-more-btn:hover {
+  background: #0f264d;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(25, 53, 104, 0.3);
+}
+
+.show-more-btn:active {
+  transform: scale(0.98);
+}

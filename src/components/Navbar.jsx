@@ -12,12 +12,11 @@ const Navbar = () => {
   const [aboutOpen, setAboutOpen] = useState(false);
   const [workOpen, setWorkOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-const [isTablet, setIsTablet] = useState(
+const isTablet =
   window.matchMedia("(hover: none)").matches
-); 
+;
 
   const [showHeader, setShowHeader] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
 
   // 🔹 Hide header on scroll down (only for desktop + tablet)
 useEffect(() => {
@@ -32,7 +31,7 @@ useEffect(() => {
       setShowHeader(true);
     }
 
-    setLastScrollY(currentScrollY);
+    setIsScrolled(currentScrollY > 0);
   };
 
   window.addEventListener("scroll", handleScroll);

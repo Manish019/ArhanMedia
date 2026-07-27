@@ -20,7 +20,6 @@ const Aiskill = () => {
             </div>
           </section>
     <div className="bg-[#516ee5] py-12">
-
       <div className="bg-[#516ee5] py-12">
         <div className="max-w-7xl mx-auto px-4">
           {aistudioData.map((item, index) => (

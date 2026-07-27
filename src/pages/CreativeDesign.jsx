@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { motion } from "framer-motion";
 import aboutImg from '../assets/about-us.jpg';
-import c1 from "../assets/serv-img/c1.jpg";
 
 import CreativeData from "../Data/CreativeData.js";
 

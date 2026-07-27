@@ -24,7 +24,7 @@ const CGI = () => {
     </section>
 
   
-<div classNameName="container mx-auto p-4 py-10">
+<div className="container mx-auto p-4 py-10">
    <div className="mx-auto sm:w-[90%] md:w-3/3 lg:w-[90%] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 px-4 py-10">
       <LiteYouTubeEmbed
       id="cufPND78eXQ"

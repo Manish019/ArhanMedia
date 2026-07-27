@@ -1,5 +1,4 @@
 import BrandSection from "../components/BrandSection";
-import { workData } from "../Data/WorkPage";
 import aboutImg from '../assets/about-us.jpg';
 import { Link } from "react-router-dom";
 const Reanders = () => {

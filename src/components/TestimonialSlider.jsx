@@ -1,4 +1,5 @@
 import React from 'react';
+import pr2 from '../assets/serv-img/pr1.jpg';
 
 
 const TestimonialSlider = () => {
@@ -110,7 +111,7 @@ const TestimonialSlider = () => {
     </div>
   </div>
 </section>
- <div classNameName="container mx-auto px-4 space-y-10 sm:space-y-12 md:space-y-16">
+ <div className="container mx-auto px-4 space-y-10 sm:space-y-12 md:space-y-16">
 
       
   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">

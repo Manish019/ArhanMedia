@@ -1,4 +1,3 @@
-import { useRef} from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { GoArrowUpRight } from "react-icons/go";
@@ -72,7 +71,7 @@ const HomeSlider = () => {
   modules={[Autoplay, Pagination, Navigation]}
   className="w-full h-[70vh] sm:h-[75vh] md:h-[85vh] lg:h-screen homeslider relative"
 >
-{slidesData.map((slide, index) => (
+{slidesData.map((slide) => (
   <SwiperSlide key={slide.id}>
     {({ isActive }) => (
       <div className="relative w-full h-full">
