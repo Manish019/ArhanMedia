@@ -14,7 +14,7 @@ const OurTeamMember = () => {
   return (
     <div className="testing-container">
       <motion.h2
-        className="text-2xl sm:text-3xl md:text-4xl lg:text-[45px] font-bold text-[#193568] mb-10 text-center"
+        className="text-2xl sm:text-3xl md:text-4xl lg:text-[45px] font-bold text-[#ffffff] mb-10 text-center"
         initial={{ x: -100, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
         transition={{ duration: 1 }}

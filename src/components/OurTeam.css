@@ -1,6 +1,7 @@
 .testing-container {
   width: 100%;
   padding: 60px 5%;
+  background: #143157;
 }
 
 .team-grid {
@@ -91,9 +92,9 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .team-image {
+  /* .team-image {
     height: 360px;
-  }
+  } */
 }
 
 /* Mobile */
@@ -121,8 +122,8 @@
 
 .show-more-btn {
   padding: 12px 32px;
-  background: #193568;
-  color: #fff;
+  background: #fff;
+  color: #000;
   border: none;
   border-radius: 50px;
   font-size: 16px;
@@ -133,6 +134,7 @@
 
 .show-more-btn:hover {
   background: #0f264d;
+  color: #fff;
   transform: translateY(-3px);
   box-shadow: 0 10px 25px rgba(25, 53, 104, 0.3);
 }
