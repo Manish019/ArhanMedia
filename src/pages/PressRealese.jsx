@@ -29,7 +29,7 @@ const PressRealese = () => {
         <div
           key={press.id}
           className="flex flex-col p-6 bg-white rounded-lg"
-          style={{ boxShadow: "-1px -4px 9px #2a4e9f61" }} // Blue shadow
+          style={{ boxShadow: "-1px -4px 9px #2a4e9f61" }}
         >
           <div className="img-press mb-4">
             <img src={press.image} alt="press release" className="w-full h-auto rounded" />

@@ -36,14 +36,5 @@ export const workData = [
     ],
   },
 
-  // {
-  //   title: "CGI",
-  //   category: "campaign",
-  //   media: [
-  //     {
-  //       type: "video",
-  //       url: ImgVideo,
-  //     },
-  //   ],
-  // },
+ 
 ];
