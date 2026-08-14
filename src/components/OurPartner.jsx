@@ -58,7 +58,7 @@ const logos = [
 
 const OurPartner = () => {
   return (
-  <section className="our-partner py-12 bg-[#193568]">
+  <section className="our-partner py-12">
   <div className="max-w-8xl mx-auto px-4">
     <div className="grid grid-cols-5 gap-6">
       {logos.map((logo) => (

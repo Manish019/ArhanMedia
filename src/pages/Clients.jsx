@@ -27,7 +27,7 @@ function Client() {
        </section>
 
 
- <section className="w-full py-10 ">
+ <section className="w-full py-10 bg-[#05051f]">
       {/* <div className="max-w-6xl mx-auto px-4">
     <motion.h2 className="text-2xl sm:text-3xl text-center md:text-4xl lg:text-[45px] font-bold text-[#193568]  mb-5"
      initial={{ x: -100, opacity: 0 }}
@@ -42,7 +42,7 @@ function Client() {
   </div> */}
 
         <div className="max-w-7xl mx-auto px-4">
-          <motion.h2 className="text-2xl sm:text-3xl text-center md:text-4xl lg:text-[45px] font-bold text-[#193568]  mb-5"
+          <motion.h2 className="text-2xl sm:text-3xl text-center md:text-4xl lg:text-[45px] font-bold text-white  mb-5"
             initial={{ x: -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 1 }}
