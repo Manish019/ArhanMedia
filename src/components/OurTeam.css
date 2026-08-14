@@ -46,7 +46,6 @@
 .popup-image {
   max-width: 90vw;
   max-height: 90vh;
-  border-radius: 12px;
   object-fit: contain;
   animation: zoomIn 0.3s ease;
 }

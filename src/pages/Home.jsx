@@ -32,7 +32,7 @@ const Home = () => {
                 transition={{ duration: 1, ease: "easeOut" }}
                 viewport={{ once: false, amount: 0.3 }}
               >
-                We Are Increasing Business Success With Technology
+               The Journey
               </motion.h2>
 
               <motion.p
@@ -42,22 +42,10 @@ const Home = () => {
                 transition={{ duration: 1, ease: "easeOut" }}
                 viewport={{ once: false, amount: 0.3 }}
               >
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                doloremque maiores corrupti laborum minima recusandae
-                necessitatibus iusto fugit, ab, error mollitia quo neque
-                accusamus.
+                Arham Entertainment is a dynamic production house and advertising agency initiated in 2022 with a vision to create impactful, innovative, and engaging visual content. Backed by the founder’s extensive experience of more than 10 years in creative production and direction, the company brings together creative thinking, strong storytelling, and professional execution to deliver memorable content across platforms.
               </motion.p>
 
-              <motion.p
-                className="text-sm sm:text-base md:text-lg text-black"
-                initial={{ x: 100, opacity: 0 }}
-                whileInView={{ x: 0, opacity: 1 }}
-                transition={{ duration: 1, ease: "easeOut" }}
-                viewport={{ once: false, amount: 0.3 }}
-              >
-                Labore magnam perspiciatis rerum ipsam velit? Quisquam
-                distinctio, dolorem pariatur repellendus laboriosam.
-              </motion.p>
+              
 
               <motion.div
                 className="button mt-5"
@@ -67,7 +55,7 @@ const Home = () => {
                 viewport={{ once: false, amount: 0.3 }}
               >
                 <div className="mt-4 inline-block bg-[#193568] hover:bg-indigo-700 text-white px-6 py-2 rounded-full shadow hover:opacity-95 uppercase font-semibold text-center">
-                  <Link to="/about">Learn More</Link>
+                  <Link to="/about">Our Journey</Link>
                 </div>
               </motion.div>
             </div>
@@ -93,7 +81,7 @@ const Home = () => {
         <div className="container mx-auto px-4 py-8">
           <div className="flex flex-col-reverse md:flex-row items-center gap-8">
             {/* 📝 Text Column (Left on desktop, bottom on mobile) */}
-            <div className="w-full md:w-3/5 p-4 md:p-6">
+            <div className="w-full md:w-2/1 p-4 md:p-6">
               <motion.h2
                 className="text-2xl sm:text-3xl md:text-4xl lg:text-[45px] font-bold text-[#193568] leading-tight mb-5 text-center md:text-left"
                 initial={{ x: -100, opacity: 0 }}
@@ -111,21 +99,15 @@ const Home = () => {
                 viewport={{ once: false, amount: 0.3 }}
               >
                 <p className="mt-2 text-[16px]">
-                  We are an brand partners offering integrated advertising, high
-                  end content production and 360 degree marketing and branding
-                  solutions tailored to niche markets.
+                  Arham Entertainment is an integrated advertising agency and production house, initiated in 2022 with a vision to bring creative thinking, strategic brand solutions and seamless production under one roof. With the founder bringing over 10 years of experience in creative production and direction, Arham Entertainment combines strong creative vision with robust execution capabilities to create work that is distinctive, engaging and built around the needs of modern brands. From advertising and branded films to digital content and complete communication solutions, we partner with brands to turn ideas into impactful experiences.
+
                 </p>
                 <p className="mt-2 text-[16px]">
-                  Blending classic strategy with contemporary creativity, we
-                  specialise in end 2 end brand building though content
-                  creation, identity design, and Digital campaigns to media
-                  planning, experiential marketing and performance analytics.
+                  Our capabilities span the entire creative and production ecosystem—from creative direction, ideation, concept development, scripting and storyboarding to pre-production, location scouting and finalisation, casting, celebrity selection and endorsements, production design, photography production, shoot execution and complete post-production. We also specialise in content creation, branded content, social and digital campaigns, performance marketing and integrated marketing solutions across sectors. Our 24-member in-house team brings together expertise in creative direction, production, client servicing and execution, supported by professionals with experience at leading advertising agencies including Ogilvy and other reputed agencies. This allows us to seamlessly manage projects from the first idea through to final delivery.
+
                 </p>
                 <p className="mt-2 text-[16px]">
-                  Our in-house production capabilities and cross platform
-                  expertise ensure seamless execution and storytelling as our
-                  strength lies in crafting cohesive brand stories,ensuring
-                  consistency,impact and connection across every touch point-
+                  At Arham Entertainment, we constantly evolve with the changing landscape of communication and technology. Alongside traditional production, we embrace 3D rendering, CGI, visualisation and Ai studio with making videos and images emerging production technologies to create innovative and efficient visual experiences for brands. Whether it is a large-scale advertising film, a celebrity-led campaign, a product photography shoot, a digital-first content series, a performance-driven marketing campaign or a technology-led visual experience, we bring strategy, creativity, production and execution together. Our aim is simple,to take complete ownership of every project and deliver work that not only meets expectations but creates a lasting impact for our clients and their audiences.
                 </p>
               </motion.div>
 
@@ -146,7 +128,7 @@ const Home = () => {
             </div>
 
             {/* 🎥 Video Column */}
-            <motion.div
+            {/* <motion.div
               className="w-full md:w-2/3 rounded-xl overflow-hidden shadow-[ -1px_-4px_9px_#2a4e9f61]"
               initial={{ x: 100, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
@@ -156,7 +138,7 @@ const Home = () => {
               <div className="relative w-full pt-[56.25%]">
                 {" "}
                 {/* 16:9 Aspect Ratio */}
-                <iframe
+                {/* <iframe
                   className="absolute top-0 left-0 w-full h-full rounded-xl"
                   src="https://player.vimeo.com/video/146022717?color=0c88dd&title=0&byline=0&portrait=0&badge=0"
                   frameBorder="0"
@@ -165,7 +147,7 @@ const Home = () => {
                   title="About Video"
                 ></iframe>
               </div>
-            </motion.div>
+            </motion.div> */}
           </div>
         </div>
         {/* services */}

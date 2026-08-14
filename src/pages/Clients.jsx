@@ -41,7 +41,7 @@ function Client() {
     <ClientSlider />
   </div> */}
 
-        <div className="max-w-6xl mx-auto px-4">
+        <div className="max-w-7xl mx-auto px-4">
           <motion.h2 className="text-2xl sm:text-3xl text-center md:text-4xl lg:text-[45px] font-bold text-[#193568]  mb-5"
             initial={{ x: -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
@@ -57,7 +57,7 @@ function Client() {
 
   {/* <Testimonial /> */}
   
- <Testing />
+ {/* <Testing /> */}
 </section>
  
 

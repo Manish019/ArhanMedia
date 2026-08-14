@@ -131,7 +131,7 @@ const HomeSlider = () => {
   viewport={{ once: false, amount: 0.3 }}
 >
   <motion.img
-    src="./bottel.png"
+    src="/bottel.png"
     alt="bottel"
     className="w-full max-w-[400px] md:max-w-[400px] object-cover rounded-lg origin-center"
     initial={{ rotate: 0 }}
