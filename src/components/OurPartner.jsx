@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import aditiyabirla from "../assets/partnerlogo/l1.JPG";
+import aditiyabirla from "../assets/partnerlogo/l1.jpg";
 import aditiyabirla2 from "../assets/partnerlogo/l2.JPG";
 import aditiyabirla3 from "../assets/partnerlogo/l3.png";
 import aditiyabirla4 from "../assets/partnerlogo/l4.jpg";
