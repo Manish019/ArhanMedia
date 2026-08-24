@@ -9,7 +9,8 @@ const Aiskill = () => {
   return (
     <>
     <section
-            className="relative bg-cover bg-center bg-no-repeat h-[300px] flex items-center"
+            className="relative bg-cover bg-center bg-no-repeat h-[300px] flex items-center"npm run dev
+            
             style={{ backgroundImage: `url(${aboutImg})` }}
           >
             <div className="absolute inset-0 bg-gradient-to-b from-black/20 to-black/20"></div>
