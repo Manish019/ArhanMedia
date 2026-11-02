@@ -105,7 +105,7 @@ useEffect(() => {
                   to="/about/team"
                   className="block px-4 py-2 border-b border-gray-500 hover:bg-indigo-600 hover:text-white"
                 >
-                  Our Teams
+                  Our Team
                 </Link>
                 <Link
                   to="/about/award"
@@ -194,7 +194,7 @@ useEffect(() => {
                   Digital Media
                 </Link>
                 <Link
-                  to="/work/reanders"
+                  to="/work/renders"
                   className="border-b border-gray-500 block px-4 py-2 hover:bg-indigo-600 hover:text-white"
                 >
                   Renders (3D)
@@ -215,7 +215,7 @@ useEffect(() => {
             </div>
 
             <Link to="/clients" className="uppercase">
-              Client
+              Clientle
             </Link>
 
             <Link to="/connect-us" className="uppercase">
@@ -286,7 +286,7 @@ useEffect(() => {
                     to="/about/team"
                     className="block py-2 border-b border-gray-500 hover:bg-indigo-50 hover:text-indigo-600 transition-colors font-light"
                   >
-                    Our Teams
+                    Our Team
                   </Link>
                   <Link
                     to="/about/awards"
@@ -361,7 +361,7 @@ useEffect(() => {
                    <Link
                     to="/work/renders"
                     className="block py-2 hover:bg-indigo-50 hover:text-indigo-600 transition-colors border-b border-gray-500"
-                  >                  Reanders (3D)
+                  >                  Renders (3D)
 
                   </Link>
                    <Link
@@ -374,7 +374,7 @@ useEffect(() => {
                     to="/work/videos"
                     className="block py-2 hover:bg-indigo-50 hover:text-indigo-600 transition-colors border-b border-gray-500"
                   >
-                    Creative Design
+Creative Direction
                   </Link>
                 </div>
               </div>
@@ -383,7 +383,7 @@ useEffect(() => {
                 to="/clients"
                 className="block py-2 border-b border-gray-500 hover:bg-indigo-50 hover:text-indigo-600 transition-colors"
               >
-                Clients
+                Clientle
               </Link>
               <Link
                 to="/connect-us"

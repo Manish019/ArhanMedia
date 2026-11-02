@@ -24,32 +24,30 @@ const AImotion = () => {
     </section>
 
   
+  
 <div classNameName="container mx-auto p-4 py-10">
    <div className="mx-auto sm:w-[90%] md:w-3/3 lg:w-[90%] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-4 py-10">
       <LiteYouTubeEmbed
-      id="CF7bJOwrzPQ"
+      id="EC3yU82zEX8"
       title="Rick Astley - Never Gonna Give You Up"
     />
     <LiteYouTubeEmbed
-      id="cb_ILFlHliM"
+      id="_d-V_3AQHuM"
       title="Rick Astley - Never Gonna Give You Up"
     />
     <LiteYouTubeEmbed
-      id="y9nfGw_KSFo"
+      id="h5fz1t6py_U"
       title="Rick Astley - Never Gonna Give You Up"
     />
      <LiteYouTubeEmbed
-      id="IfNipyVoPHY"
+      id="ZZMLzp7UU5M"
       title="Rick Astley - Never Gonna Give You Up"
     />
      <LiteYouTubeEmbed
-      id="aqYjEL4mDKY"
+      id="55EgbNAuf3A"
       title="Rick Astley - Never Gonna Give You Up"
     />
-    <LiteYouTubeEmbed
-      id="D6ryv26qA-I"
-      title="Rick Astley - Never Gonna Give You Up"
-    />
+    
     </div>
     
   </div>

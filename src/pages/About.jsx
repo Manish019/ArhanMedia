@@ -75,9 +75,9 @@ const About = () => {
           transition={{ duration: 1, ease: 'easeOut' }}
           viewport={{ once: false, amount: 0.3 }}
         >
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. At doloremque
-          maiores corrupti laborum minima recusandae necessitatibus iusto fugit,
-          ab, error mollitia quo neque accusamus.
+          Arham Entertainment is a dynamic production house and advertising agency initiated in 2022 with a vision to create impactful, innovative, and engaging visual content. Backed by the founder’s extensive experience of more than 10 years in creative production and direction, the company brings together creative thinking, strong storytelling, and professional execution to deliver memorable content across platforms.
+
+
         </motion.p>
   
         <motion.div
@@ -87,9 +87,9 @@ const About = () => {
           transition={{ duration: 1, ease: 'easeOut' }}
           viewport={{ once: false, amount: 0.3 }}
         >
-          <div className="mt-4 inline-block bg-[#193568] hover:bg-indigo-700 text-white px-6 py-2 rounded-full shadow hover:opacity-95 uppercase font-semibold text-center">
+          {/* <div className="mt-4 inline-block bg-[#193568] hover:bg-indigo-700 text-white px-6 py-2 rounded-full shadow hover:opacity-95 uppercase font-semibold text-center">
             <Link to="/about">Learn More</Link>
-          </div>
+          </div> */}
         </motion.div>
       </div>
   
@@ -121,7 +121,6 @@ const About = () => {
         maiores corrupti laborum minima recusandae necessitatibus iusto fugit,
         ab, error mollitia quo neque accusamus.
       </motion.p>
-
       <motion.p
         className="text-sm sm:text-base md:text-lg text-black"
         initial={{ x: 100, opacity: 0 }}
@@ -133,7 +132,7 @@ const About = () => {
         dolorem pariatur repellendus laboriosam.
       </motion.p>
 
-      <motion.div
+      {/* <motion.div
         className="button mt-5"
         initial={{ y: 50, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
@@ -143,10 +142,13 @@ const About = () => {
         <div className="mt-4 inline-block bg-[#193568] hover:bg-indigo-700 text-white px-6 py-2 rounded-full shadow hover:opacity-95 uppercase font-semibold text-center">
           <Link to="/about">Learn More</Link>
         </div>
-      </motion.div>
+      </motion.div> *
     </div>
-
+  </div>
     {/* Image Column (40%) */}
+
+
+</div>
     <motion.div
       className="md:w-2/5 shadow-lg rounded-xl p-6"
       initial={{ x: 100, opacity: 0 }}
@@ -162,10 +164,10 @@ const About = () => {
     </motion.div>
   </div>
 </div>
+
   <Services />
-  
 </section>
-<Testimonial />
+{/* <Testimonial /> */}
 
 
 

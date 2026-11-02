@@ -10,13 +10,14 @@
   gap: 30px;
 }
 
-.team-card {
+.team-cards {
   overflow: hidden;
   transition: 0.3s ease;  
   cursor: pointer;
 }
 
-.team-card:hover {
+
+.team-cards:hover {
   transform: translateY(-8px);
 }
 /* Team Image Styles */
@@ -26,6 +27,7 @@
   height: 400px;
   object-fit: contain;
   background: #fff;
+  border-radius: 0;
 }
 .popup-overlay {
   position: fixed;

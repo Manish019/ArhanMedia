@@ -27,7 +27,10 @@ import CGI from "./pages/CGI.jsx";
 import Campaign from "./pages/Campaign.jsx";
 import Aiskill from "./pages/AIskill.jsx";
 import AImotion from "./pages/AImotion.jsx";
-import Reanders from "./pages/Reanders.jsx";
+import Renders from "./pages/Renders.jsx";
+import InteractiveVideos from "./pages/InteractiveVideos.jsx";
+import RendersStills from "./pages/RendersStills.jsx";
+import RendersWalkthrough from "./pages/RendersWalkthrough.jsx";
 
 function App() {
 
@@ -59,7 +62,10 @@ function App() {
 
 
 <Route path="/work/animation" element={<Animation />} />
-<Route path="/work/reanders" element={<Reanders />} />
+<Route path="/work/renders" element={<Renders />} />
+<Route path="/work/renders/interactive-videos" element={<InteractiveVideos />} />
+<Route path="/work/renders/renders-stills" element={<RendersStills />} />
+<Route path="/work/renders/renders-walkthrough" element={<RendersWalkthrough />} />
 <Route path="/connect-us" element={<Contact cities={cities} />} />
 <Route path="*" element={<NotFound />} />
 {/* <Route path="/coming-soon" element={<ComingSoon />} /> */}

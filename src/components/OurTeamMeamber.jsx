@@ -24,7 +24,7 @@ const OurTeamMember = () => {
 
       <div className="team-grid">
         {visibleMembers.map((member) => (
-          <div key={member.id} className="team-card">
+          <div key={member.id} className="team-cards">
             <img
               src={member.img}
               alt={member.name}

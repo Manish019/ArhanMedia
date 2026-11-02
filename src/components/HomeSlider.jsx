@@ -123,22 +123,20 @@ const HomeSlider = () => {
   </motion.div>
 
   {/* Right Column - Image (Hidden on mobile) */}
-  <motion.div
+  <div
   className="w-full md:w-1/2 flex justify-center md:justify-center hidden md:flex"
   initial={{ x: 100, opacity: 0 }}
   whileInView={{ x: 0, opacity: 1 }}
   transition={{ duration: 1, ease: "easeOut" }}
   viewport={{ once: false, amount: 0.3 }}
 >
-  <motion.img
+  <img
     src="/bottel.png"
     alt="bottel"
     className="w-full max-w-[400px] md:max-w-[400px] object-cover rounded-lg origin-center"
-    initial={{ rotate: 0 }}
-    animate={{ rotate: 25, rotateX: 5, rotateY: 5 }}
-    transition={{ duration: 5, ease: "easeInOut" }}
+   
   />
-</motion.div>
+</div>
 </div>
 
 
@@ -148,19 +146,19 @@ const HomeSlider = () => {
   ))}
 
   <div className="absolute bottom-8 left-0 right-0 flex justify-center items-center gap-6 text-white z-20 ">
-  <button className="custom-prev text-sm sm:text-base font-semibold tracking-widest hover:text-indigo-400 transition-all flex items-center gap-2">
+ {/* <button className="custom-prev text-sm sm:text-base font-semibold tracking-widest hover:text-indigo-400 transition-all flex items-center gap-2">
     PREV
-        <span className="block w-20 h-[1px] bg-gray-300"></span> {/* small line before PREV */}
-
-  </button>
+        <span className="block w-20 h-[1px] bg-gray-300"></span> 
+?
+  </button>  */}
 
   {/* Pagination dots */}
   <div className="custom-pagination flex items-center gap-3"></div>
 
-  <button className="custom-next text-sm sm:text-base font-semibold tracking-widest hover:text-indigo-400 transition-all flex items-center gap-2">
-        <span className="block w-20 h-[1px] bg-gray-300"></span> {/* small line after NEXT */}
+  {/* <button className="custom-next text-sm sm:text-base font-semibold tracking-widest hover:text-indigo-400 transition-all flex items-center gap-2">
+        <span className="block w-20 h-[1px] bg-gray-300"></span> 
     NEXT
-  </button>
+  </button> */}
 </div>
 
 </Swiper>

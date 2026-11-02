@@ -27,10 +27,10 @@ const Aistudio = () => {
     {/* Left Section */}
     <div className="rounded-2xl p-8 shadow-lg min-h-[110px] cursor-pointer text-center bg-[#05051fa6]">
       <Link to="/work/ai-motion">
-      <h2 className="text-2xl text-white font-bold mb-4">Motion</h2>
+      <h2 className="text-2xl text-white font-bold mb-4">Videos</h2>
 
       <p className="text-white">
-       Films | Videos | CGI | UGC | Corporate | Social Media | Promotional
+       Films | Videos | CGI | UGC | Corporate | Social Media | Promotional | Animation | 3D | Products | VFX
       </p>
       </Link>
     </div>
@@ -41,7 +41,7 @@ const Aistudio = () => {
       <h2 className="text-2xl text-white font-bold mb-4">Stills</h2>
 
       <p className="text-white">
-        Campaign | Produc launch | Creatives | Social Medis Content | Elements | Poster
+        Campaign | Product | Creatives | Social Media Content | 3D | E-comm
 
       </p>
       </Link>
