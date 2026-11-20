@@ -22,10 +22,7 @@ const AImotion = () => {
         <h1 className="text-2xl md:text-3xl font-bold mb-4 text-white">AI Motion</h1>
       </div>
     </section>
-
-  
-  
-<div classNameName="container mx-auto p-4 py-10">
+<div className="container mx-auto p-4 py-10">
    <div className="mx-auto sm:w-[90%] md:w-3/3 lg:w-[90%] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-4 py-10">
       <LiteYouTubeEmbed
       id="EC3yU82zEX8"

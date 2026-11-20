@@ -123,4 +123,4 @@ const CreativeDesign = () => {
   )
 }
 
-export default CreativeDesign
+export default CreativeDesign;

@@ -58,4 +58,4 @@ const PressRealese = () => {
   )
 }
 
-export default PressRealese
+export default PressRealese;
